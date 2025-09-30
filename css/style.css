@@ -1,5 +1,12 @@
 /* Generales */
-
+:root{
+    --color-black:  #000;
+    --color-grey-1: rgb(51, 51, 51);
+    --color-grey-2: rgb(108, 108, 108);
+    --color-white: #fff;
+    --color-blue-1: rgb(83, 104, 223);
+    --color-blue-2: rgba(37, 43, 70, 0.95);
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -21,10 +28,67 @@ ul {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-black);
+}
+
+h1{
+ font-size: 3.25rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.75rem;
+}
+p{
+    font-size: 1.5rem;
+}
+
+/* Utilidades */
+
+.container-90 {
+    width: 90%;
+}
+.container-80 {
+    width: 80%;
+}
+.container-70 {
+    width: 70%;
+}
+.container-50 {
+    width: 50%;
+}
+
+.container-90,
+.container-80,
+.container-70,
+.container-50{
+    margin: 0 auto;
+}
+
+.btn{
+    margin: 0;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,.05);
+
+}
+.btn-blue{
+    background-color: var(--color-blue-1);
+    color: var(--color-white);
+}
+.btn-white{
+    background-color: var(--color-white);
+    color: var(--color-grey-2);
+    
 }
 
 /* Navegador */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -32,8 +96,8 @@ a {
   padding: 1.5rem;
   position: relative;
   z-index: 1001;
+  margin-bottom: 3rem;
 }
-
 
 .menu-toggle {
   background: none;
@@ -47,7 +111,7 @@ a {
 .menu-toggle .bar {
   width: 2.5rem;
   height: 0.3rem;
-  background-color: #333;
+  background-color: var(--color-grey-1);
   transition: 0.3s;
 }
 
@@ -59,7 +123,7 @@ a {
   bottom: 0;
   height: 100vh;
   width: 100%;
-  background-color: rgba(37, 43, 70, 0.95);
+  background-color: var(--color-blue-2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,13 +139,54 @@ a {
 
 .nav-links a {
   font-size: 1.8rem;
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
 .nav-links .btn-loggin {
   padding: 0.8rem 2rem;
-  border: 2px solid #fff;
+  border: 2px solid --color-white;
   border-radius: 4px;
-  color: #fff;
+  color: var(--color-white);
 }
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+.hero__image img {
+    width: 100%;
+    max-width: 50rem;
+}
+.hero__content {
+    max-width: 50rem;
+}
+
+.hero__title {
+    font-size: 2.4rem;
+    color: var(--color-grey-1);
+    width: 50%;
+    margin: 0 auto 1.5rem auto;
+}
+
+.hero__text {
+    font-size: 1.5rem;
+    color: var(--color-grey-2);
+    line-height: 2.5rem;
+    margin: 0 auto 2rem auto;
+    width: 70%;
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
