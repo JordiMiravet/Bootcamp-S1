@@ -209,7 +209,6 @@ p{
     flex-wrap: wrap;
     gap: 2rem;
 }
-/* hero desktop */
 
 @media (min-width: 769px) {
     .hero {
@@ -285,7 +284,7 @@ p{
         margin: 0 auto 2.5rem auto;
     }
     .features__info p {
-        width: 60%;
+        width: 40%;
     }
 }
 .features__tabs {
