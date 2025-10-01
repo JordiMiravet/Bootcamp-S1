@@ -49,27 +49,8 @@ p{
 
 /* Utilidades */
 
-.container-90 {
-    width: 90%;
-}
-.container-80 {
-    width: 80%;
-}
-.container-70 {
-    width: 70%;
-}
-.container-50 {
-    width: 50%;
-}
-
-.container-90,
-.container-80,
-.container-70,
-.container-50{
-    margin: 0 auto;
-}
-
-.btn{
+.btn-primary,
+.btn-install{
     margin: 0;
     padding: 1.5rem 3rem;
     border: none;
@@ -80,14 +61,14 @@ p{
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,.05);
 
 }
-.btn-blue{
+.btn-download-chrome,
+.btn-install{
     background-color: var(--color-blue-1);
     color: var(--color-white);
 }
-.btn-white{
+.btn-download-firefox{
     background-color: var(--color-white);
     color: var(--color-grey-2);
-    
 }
 
 /* Navegador */
@@ -292,6 +273,54 @@ p{
 .bookmark__btn{
     display: none;
 }
+
+/* Download */
+
+.download{
+    display: block;
+    margin: 0 auto 10rem auto;
+}
+.download__info{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 5rem auto;
+}
+.download__info h2{
+    color: var(--color-blue-2);
+}
+.download__info p{
+    font-size: 1.5rem;
+    color: var(--color-grey-2);
+    line-height: 2.5rem;
+}
+.download__cards{
+    display: grid;
+    text-align: center;
+    gap: 3.5rem;
+}
+.card{
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 1.5rem 1.5rem 1.5rem rgba(0, 124, 169, 0.1);
+    min-width: 25rem;
+    min-height: 30rem;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.card img{
+    width: 50%;
+    margin: 2rem auto 0 auto;
+
+}
+.card h2{
+    color: var(--color-blue-2);
+}
+.card p{
+    color: var(--color-grey-2);
+    margin-bottom: 5rem;
+}
+
+
 
 
 
