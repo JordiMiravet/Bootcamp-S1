@@ -55,7 +55,7 @@ p{
 /* Utilidades */
 
 .btn-primary,
-.btn-card-install{
+.btn-card-install {
     margin: 0;
     padding: 1.5rem 3rem;
     border: none;
@@ -64,25 +64,24 @@ p{
     cursor: pointer;
     transition: 0.25s;
     box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
-
 }
 .btn-download-chrome,
 .btn-card-install,
-.btn-info{
+.btn-info {
     background-color: var(--color-blue-light);
     color: var(--color-white);
 }
-.btn-download-firefox{
+.btn-download-firefox {
     background-color: var(--color-white);
     color: var(--color-grey-dark);
 }
-.btn-bookmark{
+.btn-bookmark {
     display: none;
 }
-.btn-card-install{
+.btn-card-install {
     margin: 2rem;
 }
-.btn-info{
+.btn-info {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,7 +99,6 @@ p{
     margin-bottom: 5rem;
     padding: 1.5rem;
 }
-
 .menu-toggle {
     background: none;
     border: none;
@@ -139,7 +137,7 @@ p{
     transform: translateY(0);
 }
 
-.nav-links a{
+.nav-links a {
     font-size: 3rem;
     color: var(--color-white);
     text-transform: uppercase;
@@ -163,6 +161,23 @@ p{
     margin: 2rem auto 15rem auto;
     font-size: 3.5rem;
 }
+.hero__image {
+    position: relative;
+    width: 100%;
+    max-width: 100rem;
+    margin-bottom: 2.5rem;
+}
+.hero__image::before {
+    content: "";
+    position: absolute;
+    bottom: 2.5rem;
+    left: 15rem;
+    width: 100%;
+    height: 70%;
+    background-color: var(--color-blue-light);
+    border-radius: 0 15rem 0;
+    z-index: -1;
+}
 .hero__image img {
     width: 100%;
     max-width: 50rem;
@@ -170,7 +185,6 @@ p{
 .hero__content {
     max-width: 50rem;
 }
-
 .hero__content h2 {
     font-size: 2.4rem;
     color: var(--color-grey-darkest);
@@ -178,7 +192,6 @@ p{
     margin: 0 auto 2.5rem auto;
 
 }
-
 .hero__content p {
     font-weight: 500;
     color: var(--color-grey-light);
@@ -186,7 +199,6 @@ p{
     margin: 0 auto 3.5rem auto;
     width: 75%;
 }
-
 .hero__buttons {
     display: flex;
     justify-content: center;
@@ -196,20 +208,20 @@ p{
 
 /* Features */
 
-.features{
+.features {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0 auto 10rem auto;
 }
-.features__info{
+.features__info {
     margin-bottom: 2.5rem;
 }
-.features__info h2{
+.features__info h2 {
     text-align: center;
 }
-.features__info p{
+.features__info p {
     font-weight: 500;
     color: var(--color-grey-light);
     line-height: 3rem;
@@ -225,13 +237,13 @@ p{
   width: 80%;
 
 }
-.tabs__box{
+.tabs__box {
     display: flex;
     justify-content: center;
     border-top: 0.1px solid var(--color-grey-lightest);
 
 }
-.tabs__box:last-of-type{
+.tabs__box:last-of-type {
     border-bottom: 0.1px solid var(--color-grey-lightest);
 }
 .tabs__btn {
@@ -266,7 +278,19 @@ p{
 .bookmark__image {
     text-align: center;
     margin-bottom: 5rem;
-    
+    width: 90%;
+    position: relative;   
+}
+.bookmark__image::before {
+    content: "";
+    position: absolute;
+    bottom: -5rem;
+    left: -15rem;
+    width: 100%;
+    height: 90%;
+    background-color: var(--color-blue-light);
+    border-radius:0 0 15rem;
+    z-index: -1;
 }
 .bookmark__image img {
     width: 90%;
@@ -298,22 +322,22 @@ p{
     width: 70%;
     margin: 0 auto 5rem auto;
 }
-.download__info h2{
+.download__info h2 {
     color: var(--color-blue-dark);
 }
-.download__info p{
+.download__info p {
     font-weight: 500;
     text-align: center;
     color: var(--color-grey-light);
     line-height: 3rem;
     margin: 0 auto 3.5rem auto;
 }
-.download__cards{
+.download__cards {
     display: grid;
     text-align: center;
     gap: 3.5rem;
 }
-.card{
+.card {
     display: grid;
     grid-template-columns: 1fr;
 
@@ -327,37 +351,35 @@ p{
     width: 50%;
     margin: 7.5rem auto 0 auto;
 }
-.card h2{
+.card h2 {
     color: var(--color-blue-dark);
     margin: 3rem 0 0.5rem 0;
     font-size: 2.25rem;
 }
-.card p{
+.card p {
     color: var(--color-grey-dark);
     margin: 1rem auto 3.5rem auto;
 }
 .card__dots{
     width: 100%;
-
-
 }
 
 /* FAQ */
 
-.faqs{
+.faqs {
     display: block;
     margin: 0 auto 15rem auto;
 }
-.faqs__info{
+.faqs__info {
     text-align: center;
     margin-bottom: 7.5rem;
 }
-.faqs__info h2{
+.faqs__info h2 {
     width: 50%;
     margin: 0 auto 2.5rem auto;
     
 }
-.faqs__info p{
+.faqs__info p {
     font-weight: 500;
     text-align: center;
     color: var(--color-grey-light);
@@ -365,17 +387,17 @@ p{
     margin: 0 auto 3.5rem auto;
     width: 75%;
 }
-.faqs__toggle{
+.faqs__toggle {
     width: 80%;
     margin: 0 auto;
 }
-.faqs__toggle details{
+.faqs__toggle details {
     font-size: 1.5rem;
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--color-grey-lightest);
 
 }
-.faqs__toggle details summary{
+.faqs__toggle details summary {
     font-weight: 700;
     list-style: none;
     display: flex;
@@ -383,7 +405,7 @@ p{
     align-items: center;
     cursor: pointer;
 }
-summary .icon{
+summary .icon {
     color: var(--color-blue-light);
 }
 .faqs__toggle details[open] summary img {
@@ -391,7 +413,7 @@ summary .icon{
     filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
 }
 
-.faqs__toggle details p{
+.faqs__toggle details p {
     font-weight: 500;
     color: var(--color-grey-dark);
     line-height: 2.5rem;
@@ -400,17 +422,17 @@ summary .icon{
 
 /* Footer */
 
-.footer{
+.footer {
     display: block;
 }
-.footer__contact{
+.footer__contact {
     background-color: var(--color-blue-light);
     padding:5rem 0;
     text-align: center;
     color: var(--color-white);
     
 }
-.footer__contact h3{
+.footer__contact h3 {
     font-weight: 400;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
@@ -421,7 +443,7 @@ summary .icon{
     margin: 0 auto;
     margin-bottom: 3.5rem;
 }
-.footer__contact input{
+.footer__contact input {
     width: 80%;
     border: none;
     border-radius: .5rem;
@@ -430,27 +452,27 @@ summary .icon{
     color: var(--color-grey-light);
     
 }
-.btn-contact{
+.btn-contact {
     width: 80%;
     background-color: var(--color-red-light);
     color: var(--color-white);
 }
-.footer__navbar{
+.footer__navbar {
     display: block;
     padding: 5rem 0;
     text-align: center;
     background-color: var(--color-blue-dark);
     
 }
-.footer__navbar a img{
+.footer__navbar a img {
     margin-bottom: 2rem;
     width: 30%;
 }
-.footer__navbar nav ul li{
+.footer__navbar nav ul li {
     padding: 1.5rem;
     
 }
-.footer__navbar nav ul li a{
+.footer__navbar nav ul li a {
     color: var(--color-white);
     text-transform: uppercase;
     font-weight: 400;
