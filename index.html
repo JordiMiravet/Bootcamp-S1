@@ -18,7 +18,7 @@
             </h1>
 
             <button class="menu-toggle" aria-label="Abrir menú">
-                ☰
+                <img src="./images/icon-hamburger.svg" alt="">
             </button>
 
             <ul class="nav-links">
@@ -36,8 +36,8 @@
                 <img src="./images/illustration-hero.svg" alt="imagen de muestra">
             </div>
             <div class="hero__content">
-                <h2 class="hero__title">A simple bookmark manager</h2>
-                <p class="hero__text">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                <h2>A simple bookmark manager</h2>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div class="hero__buttons">
                     <button type="button" class="btn-primary btn-download-chrome">Get it on Chrome</button>
                     <button type="button" class="btn-primary btn-download-firefox">Get it on Firefox</button>
@@ -46,7 +46,7 @@
         </section> <!-- hero -->
 
         <section class="features">
-            <div class="features__intro">
+            <div class="features__info">
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
             </div>
@@ -68,8 +68,8 @@
                 <img src="./images/illustration-features-tab-1.svg" alt="bookmark in one click illustrator">
             </div>
             <div class="bookmark__content">
-                <h2 class="bookmark__titles">Bookmark in one click</h2>
-                <p class="bookmark__text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <h2>Bookmark in one click</h2>
+                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
                 <button class="btn-primary btn-bookmark">More Info</button>
             </div>
         </section> <!-- bookmark -->
@@ -81,22 +81,25 @@
             </div>
             <div class="download__cards">
                 <div class="card">
-                    <img src="./images/logo-chrome.svg" alt="logotipo de chrome">
+                    <img class="card__logo" src="./images/logo-chrome.svg" alt="logotipo de chrome">
                     <h2>Add to Chrome</h2>
                     <p>Minimum version 62</p>
-                    <button class="btn-primary btn-install">Add & Install Extension</button>
+                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="btn-primary btn-card-install">Add & Install Extension</button>
                 </div>
                 <div class="card">
-                    <img src="./images/logo-firefox.svg" alt="logotipo de firefox">
+                    <img class="card__logo" src="./images/logo-firefox.svg" alt="logotipo de firefox">
                     <h2>Add to Firefox</h2>
                     <p>Minimum version 55</p>
-                    <button class="btn-primary btn-install">Add & Install Extension</button>
+                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="btn-primary btn-card-install">Add & Install Extension</button>
                 </div>
                 <div class="card">
-                    <img src="./images//logo-opera.svg" alt="logotipo de opera">
+                    <img class="card__logo" src="./images//logo-opera.svg" alt="logotipo de opera">
                     <h2>Add to Opera</h2>
                     <p>Minimum version 46</p>
-                    <button class="btn-primary btn-install">Add & Install Extension</button>
+                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="btn-primary btn-card-install">Add & Install Extension</button>
                 </div>
             </div>
         </section> <!-- download -->
@@ -108,27 +111,27 @@
             </div>
             <div class="faqs__toggle">
                 <details>
-                    <summary>What is Bookmark?</summary>
+                    <summary><span>What is Bookmark?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos maiores nesciunt quidem rerum repudiandae excepturi minus ad commodi porro nemo.
                     </p>
                 </details>
                 <details>
-                    <summary>How can I request a new browser?</summary>
+                    <summary><span>How can I request a new browser?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat inventore nihil dolorum natus ex doloremque ducimus ipsam hic aut. Porro!</p>
                 </details>
                 <details>
-                    <summary>Is there a mobile app?</summary>
+                    <summary><span>Is there a mobile app?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni velit omnis nisi perspiciatis laboriosam consequuntur vero numquam facere, molestias dolor.</p>
                 </details>
                 <details>
-                    <summary>What about other Chromium browsers?</summary>
+                    <summary><span>What about other Chromium browsers?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sequi neque laudantium maiores quo. Excepturi porro aliquam est pariatur ut!</p>
                 </details>
                 <button type="button" class="btn-primary btn-info">More Info</button>
             </div>
         </section> <!-- faqs -->
+    </main> <!-- main -->
 
-    </main>
     <footer class="footer">
         <div class="footer__contact">
             <h3>35,000+ Already Joined</h3>
