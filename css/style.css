@@ -51,6 +51,7 @@ h3{
 p{
     font-size: 1.75rem;
 }
+
 img {
     max-width: 100%;
 }
@@ -76,6 +77,7 @@ img {
     background-color: var(--color-blue-light);
     color: var(--color-white);
 }
+
 .btn-download-firefox {
     background-color: var(--color-white);
     color: var(--color-grey-dark);
@@ -101,7 +103,6 @@ img {
 .btn-bookmark {
     display: none;
 }
-
 .btn-card-install {
     margin: 2rem;
     border: 2px solid transparent;
@@ -111,7 +112,6 @@ img {
     color: var(--color-blue-light);
     border: 2px solid var(--color-blue-light);
 }
-
 .btn-info {
     display: flex;
     justify-content: center;
@@ -162,7 +162,6 @@ img {
     background-color: var(--color-grey-darkest);
     transition: 0.3s;
 }
-
 .nav-links {
     position: fixed;
     top: 0;
@@ -183,11 +182,9 @@ img {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
 }
-
 .nav-links.show {
     transform: translateY(0);
 }
-
 .nav-links a {
     font-size: 3rem;
     color: var(--color-white);
@@ -209,7 +206,6 @@ img {
     .menu-toggle {
         display: none;
     }
-
     .nav-links {
         position: static;
         height: auto;         
@@ -223,7 +219,6 @@ img {
         transform: none;
         padding: 0;
     }
-
     .nav-links a {
         font-size: 1.6rem;
         color: var(--color-grey-darkest);
@@ -235,7 +230,6 @@ img {
         background-color: var(--color-white);
         
     }
-
     .nav-links .btn-loggin {
         background-color: var(--color-red-light);
         color: var(--color-white);
@@ -275,7 +269,6 @@ img {
     max-width: 100rem;
     margin-bottom: 2.5rem;
 }
-
 .hero__image::before {
     content: "";
     position: absolute;
@@ -287,11 +280,11 @@ img {
     border-radius: 0 0 0 15rem ;
     z-index: -1;
 }
-
 .hero__image img {
     width: 100%;
     max-width: 50rem;
 }
+
 .hero__content {
     width: 80%;
     max-width: 50rem;
@@ -319,6 +312,7 @@ img {
         margin: 5rem auto 15rem auto;
         width: 100%;
     }
+
     .hero__image {
         order: 2;
         width: 50%;
@@ -337,6 +331,7 @@ img {
         width: 100%;
         max-width: 70rem;
     }
+
     .hero__content {
         order: 1;
         width: 60%;
@@ -347,7 +342,6 @@ img {
         margin-left: 0;
         text-align: left;
         font-size: 3.5rem;
-
     }
     .hero__content p {
         width: 100%;
@@ -364,6 +358,7 @@ img {
     flex-direction: column;
     margin: 0 auto 10rem auto;
 }
+
 .features__info {
     margin-bottom: 2.5rem;
 }
@@ -387,6 +382,7 @@ img {
         width: 40%;
     }
 }
+
 .features__tabs {
     display: grid;
     grid-template-columns: 1fr;
@@ -398,7 +394,6 @@ img {
     display: flex;
     justify-content: center;
     border-top: 0.1px solid var(--color-grey-lightest);
-
 }
 .tabs__box:last-of-type {
     border-bottom: 0.1px solid var(--color-grey-lightest);
@@ -417,10 +412,8 @@ img {
     transition: 0.3s;
     text-align: center;
 }
-
 .tabs__btn:hover {
-    color: var(--color-red-light);
-    
+    color: var(--color-red-light); 
 }
 .tabs__btn.active {
     color: var(--color-grey-darkest);
@@ -551,7 +544,6 @@ img {
     min-height: 30rem;
     margin: 0 auto;
 }
-
 .card__logo {
     width: 50%;
     margin: 7.5rem auto 0 auto;
@@ -605,7 +597,6 @@ img {
 .faqs__info h2 {
     width: 50%;
     margin: 0 auto 2.5rem auto;
-    
 }
 .faqs__info p {
     font-weight: 500;
@@ -639,12 +630,10 @@ summary:hover{
 summary .icon {
     color: var(--color-blue-light);
 }
-
 .faqs__toggle details[open] summary img {
     transform: rotate(180deg);
     filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
 }
-
 .faqs__toggle details p {
     font-weight: 500;
     color: var(--color-grey-dark);
@@ -670,6 +659,7 @@ summary .icon {
     margin: 0;
     padding: 0;
 }
+
 .footer__contact {
     background-color: var(--color-blue-light);
     padding: 7.5rem 0;
@@ -705,10 +695,10 @@ summary .icon {
     color: var(--color-white);
     width: 100%;
 }
+
 .footer__navbar {
     width: 100%;
     background-color: var(--color-blue-dark);
-    
 }
 .footer__navbar-box{
     display: block;
@@ -721,7 +711,6 @@ summary .icon {
 }
 .footer__navbar nav ul li {
     padding: 1.5rem;
-    
 }
 .footer__navbar nav ul li a {
     color: var(--color-white);
@@ -792,8 +781,4 @@ summary .icon {
         margin: 0;
     }
 }
-
-
-
-
 
