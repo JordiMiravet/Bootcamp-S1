@@ -12,7 +12,7 @@
     --color-red-light: rgb(250, 87, 87);
     
     --color-box-shadow-grey: rgba(0,0,0,0.1);
-    --color-box-shadow-blue: rgba(0, 124, 169, 0.1);
+    --color-box-shadow-blue: rgba(0, 124, 169, 0.35);
 }
 
 html {
@@ -51,8 +51,12 @@ h3{
 p{
     font-size: 1.75rem;
 }
+img {
+    max-width: 100%;
+}
 
 /* Utilidades */
+
 
 .btn-primary,
 .btn-card-install {
@@ -76,19 +80,59 @@ p{
     background-color: var(--color-white);
     color: var(--color-grey-dark);
 }
+.btn-download-chrome,
+.btn-download-firefox {
+    border: 1px solid transparent;
+    padding: 1.5rem;
+}
+.btn-download-chrome:hover,
+.btn-download-firefox:hover {
+    background-color: var(--color-white);
+}
+.btn-download-chrome:hover {
+    color: var(--color-blue-light);
+    border: 1px solid var(--color-blue-light);
+}
+.btn-download-firefox:hover {
+    color: var(--color-grey-dark);
+    border: 1px solid var(--color-grey-dark);
+}
+
 .btn-bookmark {
     display: none;
 }
+
 .btn-card-install {
     margin: 2rem;
+    border: 2px solid transparent;
 }
+.btn-card-install:hover {
+    background-color: var(--color-white);
+    color: var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);
+}
+
 .btn-info {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3.5rem auto 0 auto;
 }
-
+.btn-contact {
+    background-color: var(--color-red-light);
+    color: var(--color-white);
+    border: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
+    border: 1px solid var(--color-red-light);
+}
+.btn-contact:hover {
+    background-color: var(--color-white);
+    color: var(--color-red-light);
+}
 
 /* Navegador */
 
@@ -100,6 +144,8 @@ p{
     z-index: 1001;
     margin-bottom: 5rem;
     padding: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
 }
 .menu-toggle {
     background: none;
@@ -181,8 +227,13 @@ p{
     .nav-links a {
         font-size: 1.6rem;
         color: var(--color-grey-darkest);
-        text-transform: none;
+        text-transform: uppercase;
         letter-spacing: normal;
+    }
+    .nav-links li a:hover {
+        color: var(--color-red-light);
+        background-color: var(--color-white);
+        
     }
 
     .nav-links .btn-loggin {
@@ -195,19 +246,27 @@ p{
     .btn-loggin {
         background-color: var(--color-red-light);
         color: var(--color-white);
+        box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
+        border: 1px solid transparent;   
+    }
+    .btn-loggin:hover {
+        background-color: var(--color-white);
+        color: var(--color-red-light);
+        border: 1px solid var(--color-red-light);   
     }
 }
 
-/* Hero */
+/* Hero section*/
 
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 2rem auto 17.5rem auto;
     font-size: 3.5rem;
+    width: 100%;
 }
 
 .hero__image {
@@ -220,12 +279,12 @@ p{
 .hero__image::before {
     content: "";
     position: absolute;
-    bottom: 2.5rem;
-    left: 15rem;
-    width: 100%;
+    bottom: 0; 
+    right: 0;   
+    width: 50%; 
     height: 70%;
     background-color: var(--color-blue-light);
-    border-radius: 0 15rem 0;
+    border-radius: 0 0 0 15rem ;
     z-index: -1;
 }
 
@@ -234,12 +293,13 @@ p{
     max-width: 50rem;
 }
 .hero__content {
+    width: 80%;
     max-width: 50rem;
 }
 .hero__content h2 {
     font-size: 2.4rem;
     color: var(--color-grey-darkest);
-    width: 70%;
+    
     margin: 0 auto 2.5rem auto;
 
 }
@@ -248,13 +308,7 @@ p{
     color: var(--color-grey-light);
     line-height: 3rem;
     margin: 0 auto 3.5rem auto;
-    width: 75%;
-}
-.hero__buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    
 }
 
 @media (min-width: 769px) {
@@ -263,7 +317,7 @@ p{
         justify-content: space-between;
         text-align: left;
         margin: 5rem auto 15rem auto;
-        width: 85%;
+        width: 100%;
     }
     .hero__image {
         order: 2;
@@ -272,11 +326,12 @@ p{
     }
     .hero__image::before {
         bottom: -2.5rem;
-        left: 15rem;
-        width: 100%;
+        left: 30%; 
+        width: 70%;
         height: 90%;
         border-radius: 0 0 0 15rem;
         transform: none;
+        margin-right: 0;
     }
     .hero__image img{
         width: 100%;
@@ -284,7 +339,8 @@ p{
     }
     .hero__content {
         order: 1;
-        width: 45%;
+        width: 60%;
+        margin: 0 auto;
     }
     .hero__content h2 {
         width: 70%;
@@ -297,19 +353,16 @@ p{
         width: 100%;
         text-align: left;
     }
-    .hero__buttons {
-        justify-content: flex-start;
-    }
 }
 
-/* Features */
+/* Features section */
 
 .features {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0 auto 15rem auto;
+    margin: 0 auto 10rem auto;
 }
 .features__info {
     margin-bottom: 2.5rem;
@@ -366,9 +419,15 @@ p{
 }
 
 .tabs__btn:hover {
+    color: var(--color-red-light);
+    
+}
+.tabs__btn.active {
     color: var(--color-grey-darkest);
     border-bottom: 5px solid var(--color-red-light);
 }
+
+
 @media (min-width: 769px) {
     .features__tabs {
         grid-template-columns: repeat(3, 1fr);
@@ -385,13 +444,9 @@ p{
         max-width: none;
         border-bottom: 5px solid var(--color-white);
     }
-
-    .tabs__btn:hover {
-        border-bottom: 5px solid var(--color-red-light);
-    }
 }
 
-/* bookmark */
+/* bookmark section*/
 
 .bookmark {
     display: flex;
@@ -461,7 +516,7 @@ p{
     }
 }
 
-/* Download */
+/* Download section */
 
 .download {
     display: block;
@@ -525,19 +580,19 @@ p{
     }
     .card:nth-child(1) {
         margin-top: 0;
-        margin-bottom: 20rem;
-    }
-    .card:nth-child(2) {
-        margin-top: 10rem;
         margin-bottom: 10rem;
     }
+    .card:nth-child(2) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
     .card:nth-child(3) {
-        margin-top: 20rem;
+        margin-top: 10rem;
         margin-bottom: 0;
     }
 }
 
-/* FAQ */
+/* FAQ section */
 
 .faqs {
     display: block;
@@ -578,9 +633,13 @@ p{
     align-items: center;
     cursor: pointer;
 }
+summary:hover{
+    color: var(--color-red-light);
+}
 summary .icon {
     color: var(--color-blue-light);
 }
+
 .faqs__toggle details[open] summary img {
     transform: rotate(180deg);
     filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
@@ -589,7 +648,9 @@ summary .icon {
 .faqs__toggle details p {
     font-weight: 500;
     color: var(--color-grey-dark);
-    line-height: 2.5rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-top: 2.5rem;
 }
 @media (min-width: 769px) {
@@ -607,15 +668,17 @@ summary .icon {
 .footer {
     display: block;
     margin: 0;
+    padding: 0;
 }
 .footer__contact {
     background-color: var(--color-blue-light);
-    padding: 5rem 0;
+    padding: 7.5rem 0;
     text-align: center;
     color: var(--color-white);
 }
 .footer__contact h3 {
     font-weight: 400;
+    font-size: 1.5rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
 }
@@ -654,7 +717,7 @@ summary .icon {
 }
 .footer__navbar a img {
     margin-bottom: 2rem;
-    width: 30%;
+    width: 50%;
 }
 .footer__navbar nav ul li {
     padding: 1.5rem;
@@ -678,12 +741,20 @@ summary .icon {
     width: 150%;
 }
 @media (min-width: 769px) {
+    .footer__contact h3 {
+        font-size: 1.5rem;
+        margin-bottom: 3.5rem;
+    }
+    .footer__contact h2 {
+        width: 35%;
+    }
+
     .footer__form{
         display: grid;
         justify-content: center;
         align-items: center;
         grid-template-columns: 2.5fr 1fr;
-        width: 50%;
+        width: 35%;
         margin: 0 auto;
         gap: 1rem;
     }
@@ -697,21 +768,25 @@ summary .icon {
     }
     .footer__navbar-box {
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 3fr 1fr;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        width: 70%;
+        padding: 3rem;
+        width: 80%;
     }
-    .footer__navbar a img {
+    .footer__navbar-box a img {
         width: 100%;
         margin-bottom: 0;
         
     }
-    .footer__navbar nav ul {
+    .footer__navbar-box nav ul {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+    }
+    .footer__navbar-box nav ul li a:hover{
+        color: var(--color-red-light);
     }
     .footer__social{
         margin: 0;

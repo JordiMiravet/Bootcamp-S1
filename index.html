@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jordi Miravet">
     <meta name="keywords" content="HTML, CSS, SCSS, SASS, Bootstrap">
-    <title>Document</title>
+    <title>Bookmark-landing-page</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Menú principal">
             <h1 class="logo">
                 <a href="#">
                     <img src="images/logo-bookmark.svg" alt="Logotipo de Bookmark">
                 </a>
             </h1>
-            <button class="menu-toggle" aria-label="Abrir menú">
-                <img src="./images/icon-hamburger.svg" alt="">
+            <button class="menu-toggle" aria-label="Abrir menú de navegación">
+                <img src="./images/icon-hamburger.svg" alt="imagen de menú de navegación">
             </button>
             <ul class="nav-links">
-                <li><a href="#">Feature</a></li>
+                <li><a href="#features">Feature</a></li>
                 <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><a class="btn-loggin" href="#">Login</a></li>
             </ul>
         </nav>
@@ -36,14 +36,14 @@
             <div class="hero__content">
                 <h2>A simple bookmark manager</h2>
                 <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-                <div class="hero__buttons">
+                <div class="hero__buttons-box">
                     <button type="button" class="btn-primary btn-download-chrome">Get it on Chrome</button>
                     <button type="button" class="btn-primary btn-download-firefox">Get it on Firefox</button>
                 </div>
             </div>
         </section> <!-- hero -->
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="features__info">
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
@@ -134,24 +134,24 @@
         <div class="footer__contact">
             <h3>35,000+ Already Joined</h3>
             <h2>Stay up-to-date with what we're doing</h2>
-            <div class="footer__form">
-                <input type="email" placeholder="Enter your email address">
-                <button type="button" class="btn-primary btn-contact">Contact Us</button>
-            </div>
+            <form class="footer__form" id="contact">
+                <input type="email" placeholder="Enter your email address" pattern=".+@gmail\.com" required>
+                <button type="submit" class="btn-primary btn-contact">Contact Us</button>
+            </form>
         </div>
         <div class="footer__navbar">
             <div class="footer__navbar-box">
-                <a href="#"><img src="./images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a>
-                <nav>
+                <nav role="navigation">
                     <ul>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#"><img src="./images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="footer__social">
-                    <a href="#"><img src="./images/icon-facebook.svg" alt="Logo de facebook"></a>
-                    <a href="#"><img src="./images/icon-twitter.svg" alt="logo de facebook"></a>
+                    <a href="/"><img src="./images/icon-facebook.svg" alt="Logo de facebook"></a>
+                    <a href="/"><img src="./images/icon-twitter.svg" alt="logo de facebook"></a>
                 </div>
             </div>
         </div>
