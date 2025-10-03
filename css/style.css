@@ -58,7 +58,6 @@ img {
 
 /* Utilidades */
 
-
 .btn-primary,
 .btn-card-install {
     margin: 0;
@@ -77,6 +76,7 @@ img {
     background-color: var(--color-blue-light);
     color: var(--color-white);
 }
+
 /* Navegador */
 
 .navbar {
