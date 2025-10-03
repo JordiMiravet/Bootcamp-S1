@@ -78,40 +78,10 @@ img {
     color: var(--color-white);
 }
 
-.btn-download-firefox {
-    background-color: var(--color-white);
-    color: var(--color-grey-dark);
-}
-.btn-download-chrome,
-.btn-download-firefox {
-    border: 1px solid transparent;
-    padding: 1.5rem;
-}
-.btn-download-chrome:hover,
-.btn-download-firefox:hover {
-    background-color: var(--color-white);
-}
-.btn-download-chrome:hover {
-    color: var(--color-blue-light);
-    border: 1px solid var(--color-blue-light);
-}
-.btn-download-firefox:hover {
-    color: var(--color-grey-dark);
-    border: 1px solid var(--color-grey-dark);
-}
 
-.btn-bookmark {
-    display: none;
-}
-.btn-card-install {
-    margin: 2rem;
-    border: 2px solid transparent;
-}
-.btn-card-install:hover {
-    background-color: var(--color-white);
-    color: var(--color-blue-light);
-    border: 2px solid var(--color-blue-light);
-}
+
+
+
 .btn-info {
     display: flex;
     justify-content: center;
@@ -219,29 +189,25 @@ img {
         transform: none;
         padding: 0;
     }
-    .nav-links a {
+    .nav-links li a {
         font-size: 1.6rem;
         color: var(--color-grey-darkest);
         text-transform: uppercase;
         letter-spacing: normal;
+
     }
     .nav-links li a:hover {
         color: var(--color-red-light);
         background-color: var(--color-white);
         
     }
-    .nav-links .btn-loggin {
-        background-color: var(--color-red-light);
-        color: var(--color-white);
-        border: none;
-        padding: 0.8rem 2rem;
-        border-radius: 5px;
-    }
     .btn-loggin {
         background-color: var(--color-red-light);
         color: var(--color-white);
+        padding: 1rem 2.5rem;
+        border: 1px solid transparent; 
+        border-radius: .5rem;
         box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
-        border: 1px solid transparent;   
     }
     .btn-loggin:hover {
         background-color: var(--color-white);
@@ -253,9 +219,7 @@ img {
 /* Hero section*/
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
     text-align: center;
     gap: 1rem;
     margin: 2rem auto 17.5rem auto;
@@ -287,6 +251,7 @@ img {
 
 .hero__content {
     width: 80%;
+    margin: 0 auto;
     max-width: 50rem;
 }
 .hero__content h2 {
@@ -304,13 +269,38 @@ img {
     
 }
 
+.btn-download-firefox {
+    background-color: var(--color-white);
+    color: var(--color-grey-dark);
+}
+
+.btn-download-chrome,
+.btn-download-firefox {
+    border: 1px solid transparent;
+    padding: 1.5rem;
+}
+.btn-download-chrome:hover,
+.btn-download-firefox:hover {
+    background-color: var(--color-white);
+}
+.btn-download-chrome:hover {
+    color: var(--color-blue-light);
+    border: 1px solid var(--color-blue-light);
+}
+.btn-download-firefox:hover {
+    color: var(--color-grey-dark);
+    border: 1px solid var(--color-grey-dark);
+}
+
 @media (min-width: 769px) {
     .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
-        margin: 5rem auto 15rem auto;
-        width: 100%;
+        margin: 5rem auto 15rem auto;  
     }
 
     .hero__image {
@@ -482,6 +472,9 @@ img {
     line-height: 3rem;
     margin: 0 auto 3.5rem auto;
 }
+.btn-bookmark {
+    display: none;
+}
 @media (min-width: 769px) {
     .bookmark {
         flex-direction: row;
@@ -560,6 +553,17 @@ img {
 .card__dots {
     width: 100%;
 }
+.btn-card-install {
+    margin: 2rem;
+    border: 2px solid transparent;
+}
+.btn-card-install:hover {
+    background-color: var(--color-white);
+    color: var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);
+}
+
+
 @media (min-width: 769px) {
     .download__info {
         width: 35%;
@@ -584,6 +588,7 @@ img {
     }
 }
 
+
 /* FAQ section */
 
 .faqs {
@@ -595,7 +600,7 @@ img {
     margin-bottom: 7.5rem;
 }
 .faqs__info h2 {
-    width: 50%;
+    width: 80%;
     margin: 0 auto 2.5rem auto;
 }
 .faqs__info p {
@@ -604,7 +609,7 @@ img {
     color: var(--color-grey-light);
     line-height: 3rem;
     margin: 0 auto 3.5rem auto;
-    width: 75%;
+    width: 80%;
 }
 .faqs__toggle {
     width: 80%;
@@ -637,7 +642,7 @@ summary .icon {
 .faqs__toggle details p {
     font-weight: 500;
     color: var(--color-grey-dark);
-    line-height: 3rem;
+    line-height: 2.75rem;
     font-size: 1.5rem;
     font-weight: 500;
     margin-top: 2.5rem;
@@ -648,7 +653,7 @@ summary .icon {
         margin: 0 auto;
     }
     .faqs__toggle {
-        width: 40%;
+        width: 30%;
     }
 }
 
