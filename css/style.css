@@ -77,33 +77,6 @@ img {
     background-color: var(--color-blue-light);
     color: var(--color-white);
 }
-
-
-
-
-
-.btn-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3.5rem auto 0 auto;
-}
-.btn-contact {
-    background-color: var(--color-red-light);
-    color: var(--color-white);
-    border: none;
-    border-radius: .5rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.25s;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
-    border: 1px solid var(--color-red-light);
-}
-.btn-contact:hover {
-    background-color: var(--color-white);
-    color: var(--color-red-light);
-}
-
 /* Navegador */
 
 .navbar {
@@ -647,6 +620,12 @@ summary .icon {
     font-weight: 500;
     margin-top: 2.5rem;
 }
+.btn-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem auto 0 auto;
+}
 @media (min-width: 769px) {
     .faqs__info {
         width: 50%;
@@ -698,7 +677,17 @@ summary .icon {
 .btn-contact {
     background-color: var(--color-red-light);
     color: var(--color-white);
+    border: 1px solid var(--color-red-light);
+    border-radius: .5rem;
     width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
+}
+.btn-contact:hover {
+    background-color: var(--color-white);
+    color: var(--color-red-light);
 }
 
 .footer__navbar {
