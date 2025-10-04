@@ -11,29 +11,18 @@
     display: block;
     margin-bottom: 15rem;
 }
-
 .hero__content {
     h2 {
-        width: 80%;
-        margin: 0 auto 2.5rem auto;
-        text-align: center;
-        font-size: 3.5rem;
-        color: $color-blue-dark;
+        @include tittle-section-center();
     }
     p{
-        width: 80%;
-        margin: 0 auto 2.5rem auto;
-        text-align: center;
-        line-height: 3rem;
-        color: $color-grey-dark;
-
+        @include text-section-center()
     }
     .hero__buttons-box {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-
         margin: 0 auto;
     }
 }
@@ -46,18 +35,10 @@
 }
 .features__info {
     h2 {
-        width: 80%;
-        margin: 0 auto 2.5rem auto;
-        text-align: center;
-        font-size: 3.5rem;
-        color: $color-blue-dark;
+        @include tittle-section-center();
     }
-    p {
-        width: 80%;
-        margin: 0 auto 2.5rem auto;
-        text-align: center;
-        line-height: 3rem;
-        color: $color-grey-dark;
+    p{
+        @include text-section-center()
     }
 }
 .features__tabs {
@@ -85,205 +66,81 @@
         }
     }
 }
-
-/* bookmark section*/
-/*
+/* Bookmark section */
 .bookmark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 15rem;
+    margin: 0 auto 17.5rem auto;
 }
 .bookmark__image {
-    text-align: center;
-    margin-bottom: 5rem;
-    width: 90%;
-    position: relative;   
-}
-.bookmark__image::before {
-    content: "";
-    position: absolute;
-    bottom: -5rem;
-    left: -15rem;
-    width: 100%;
-    height: 90%;
-    background-color: var(--color-blue-light);
-    border-radius:0 0 15rem;
-    z-index: -1;
-}
-.bookmark__image img {
-    width: 90%;
+    margin: 0 auto 7.5rem auto;
+    width: 80%;
 }
 .bookmark__content {
-    display: block;
-    width: 75%;
-}
-.bookmark__content h2 {
-    text-align: center;
-}
-.bookmark__content p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
-}
-.btn-bookmark {
-    display: none;
-}
-@media (min-width: 769px) {
-    .bookmark {
-        flex-direction: row;
-        gap: 5rem;
-        width: 90%;
-        margin: 0 auto 20rem auto;
+    h2 {
+        @include tittle-section-center();
     }
-    .bookmark__image {
-        width: 60%;
-        margin-bottom: 0;
-    }
-    .bookmark__content {
-        width: 40%;
-    }
-    .bookmark__content h2 {
-        text-align: left;
-    }
-    .bookmark__content p {
-        text-align: left;
-        width: 75%;
-        margin-left: 0;
-    }
+    p{
+        @include text-section-center()
+    } 
     .btn-bookmark {
-        display: block;
+        display: none;
     }
 }
 
 /* Download section */
-/*
 .download {
-    display: block;
-    margin: 0 auto 17.5rem auto;
+    margin-bottom: 15rem;
 }
 .download__info {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto 5rem auto;
-}
-.download__info h2 {
-    color: var(--color-blue-dark);
-}
-.download__info p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
+    h2 {
+        @include tittle-section-center();
+    }
+    p{
+        @include text-section-center();
+    }
 }
 .download__cards {
-    display: grid;
-    text-align: center;
-    gap: 3.5rem;
-}
-
-
-
-@media (min-width: 769px) {
-    .download__info {
-        width: 35%;
-    }
-    .download__cards {
-        width: 75%;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-    .card:nth-child(1) {
-        margin-top: 0;
-        margin-bottom: 10rem;
-    }
-    .card:nth-child(2) {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-    .card:nth-child(3) {
-        margin-top: 10rem;
-        margin-bottom: 0;
-    }
-}
-
-*/
-/* FAQ section */
-/*
-.faqs {
-    display: block;
-    margin: 0 auto 15rem auto;
-}
-.faqs__info {
-    text-align: center;
-    margin-bottom: 7.5rem;
-}
-.faqs__info h2 {
-    width: 80%;
-    margin: 0 auto 2.5rem auto;
-}
-.faqs__info p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
-    width: 80%;
-}
-.faqs__toggle {
-    width: 80%;
-    margin: 0 auto;
-}
-.faqs__toggle details {
-    font-size: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-grey-lightest);
-
-}
-.faqs__toggle details summary {
-    font-weight: 700;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-summary:hover{
-    color: var(--color-red-light);
-}
-summary .icon {
-    color: var(--color-blue-light);
-}
-.faqs__toggle details[open] summary img {
-    transform: rotate(180deg);
-    filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
-}
-.faqs__toggle details p {
-    font-weight: 500;
-    color: var(--color-grey-dark);
-    line-height: 2.75rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 2.5rem;
-}
-.btn-info {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3.5rem auto 0 auto;
+    flex-direction: column;
+    gap: 5rem;
+    width: 80%;
+    margin: 0 auto;
 }
-@media (min-width: 769px) {
-    .faqs__info {
-        width: 50%;
+
+/* FAQ section */
+.faqs {
+    margin-bottom: 15rem;
+}
+.faqs__info {
+    h2 {
+        @include tittle-section-center();
+    }
+    p {
+        @include text-section-center();
+    }
+}
+.faqs__toggle {
+    text-align: center;
+    details {
+        width: 80%;
         margin: 0 auto;
+
+        padding: 1.5rem 0;
+        border-bottom: 1px solid $color-grey-light;
     }
-    .faqs__toggle {
-        width: 30%;
+    summary {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        color: $color-grey-darkest;
+    }
+    p {
+        color: $color-grey-dark;
+        line-height: 3.5rem;
+    }
+    .btn-info {
+        margin: 5rem auto 0 auto;
     }
 }
-*/
+

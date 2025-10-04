@@ -305,6 +305,7 @@ img {
   color: #fff;
 }
 
+/* Card */
 .card {
   display: grid;
   grid-template-columns: 1fr;
@@ -313,34 +314,29 @@ img {
   min-width: 25rem;
   min-height: 30rem;
   margin: 0 auto;
+  text-align: center;
 }
-
-.card__logo {
+.card .card__logo {
   width: 50%;
   margin: 7.5rem auto 0 auto;
 }
-
 .card h2 {
   color: rgba(37, 43, 70, 0.95);
   margin: 3rem 0 0.5rem 0;
   font-size: 2.25rem;
 }
-
 .card p {
   color: rgb(100, 100, 108);
   margin: 1rem auto 3.5rem auto;
 }
-
-.card__dots {
+.card .card__dots {
   width: 100%;
 }
-
-.btn-card-install {
+.card .btn-card-install {
   margin: 2rem;
   border: 2px solid transparent;
 }
-
-.btn-card-install:hover {
+.card .btn-card-install:hover {
   background-color: #fff;
   color: rgb(83, 104, 223);
   border: 2px solid rgb(83, 104, 223);
@@ -353,14 +349,14 @@ img {
 }
 
 .hero__content h2 {
-  width: 80%;
+  width: 85%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .hero__content p {
-  width: 80%;
+  width: 85%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   line-height: 3rem;
@@ -381,14 +377,14 @@ img {
 }
 
 .features__info h2 {
-  width: 80%;
+  width: 85%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .features__info p {
-  width: 80%;
+  width: 85%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   line-height: 3rem;
@@ -421,206 +417,105 @@ img {
   border-bottom: 0.5rem solid rgb(250, 87, 87);
 }
 
-/* bookmark section*/
-/*
+/* Bookmark section */
 .bookmark {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 15rem;
+  margin: 0 auto 17.5rem auto;
 }
+
 .bookmark__image {
-    text-align: center;
-    margin-bottom: 5rem;
-    width: 90%;
-    position: relative;   
+  margin: 0 auto 7.5rem auto;
+  width: 80%;
 }
-.bookmark__image::before {
-    content: "";
-    position: absolute;
-    bottom: -5rem;
-    left: -15rem;
-    width: 100%;
-    height: 90%;
-    background-color: var(--color-blue-light);
-    border-radius:0 0 15rem;
-    z-index: -1;
-}
-.bookmark__image img {
-    width: 90%;
-}
-.bookmark__content {
-    display: block;
-    width: 75%;
-}
+
 .bookmark__content h2 {
-    text-align: center;
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgba(37, 43, 70, 0.95);
 }
 .bookmark__content p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  line-height: 3rem;
+  color: rgb(100, 100, 108);
 }
-.btn-bookmark {
-    display: none;
-}
-@media (min-width: 769px) {
-    .bookmark {
-        flex-direction: row;
-        gap: 5rem;
-        width: 90%;
-        margin: 0 auto 20rem auto;
-    }
-    .bookmark__image {
-        width: 60%;
-        margin-bottom: 0;
-    }
-    .bookmark__content {
-        width: 40%;
-    }
-    .bookmark__content h2 {
-        text-align: left;
-    }
-    .bookmark__content p {
-        text-align: left;
-        width: 75%;
-        margin-left: 0;
-    }
-    .btn-bookmark {
-        display: block;
-    }
+.bookmark__content .btn-bookmark {
+  display: none;
 }
 
 /* Download section */
-/*
 .download {
-    display: block;
-    margin: 0 auto 17.5rem auto;
+  margin-bottom: 15rem;
 }
-.download__info {
-    text-align: center;
-    width: 70%;
-    margin: 0 auto 5rem auto;
-}
+
 .download__info h2 {
-    color: var(--color-blue-dark);
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgba(37, 43, 70, 0.95);
 }
 .download__info p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  line-height: 3rem;
+  color: rgb(100, 100, 108);
 }
+
 .download__cards {
-    display: grid;
-    text-align: center;
-    gap: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
-
-
-@media (min-width: 769px) {
-    .download__info {
-        width: 35%;
-    }
-    .download__cards {
-        width: 75%;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-    .card:nth-child(1) {
-        margin-top: 0;
-        margin-bottom: 10rem;
-    }
-    .card:nth-child(2) {
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-    }
-    .card:nth-child(3) {
-        margin-top: 10rem;
-        margin-bottom: 0;
-    }
-}
-
-*/
 /* FAQ section */
-/*
 .faqs {
-    display: block;
-    margin: 0 auto 15rem auto;
+  margin-bottom: 15rem;
 }
-.faqs__info {
-    text-align: center;
-    margin-bottom: 7.5rem;
-}
+
 .faqs__info h2 {
-    width: 80%;
-    margin: 0 auto 2.5rem auto;
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgba(37, 43, 70, 0.95);
 }
 .faqs__info p {
-    font-weight: 500;
-    text-align: center;
-    color: var(--color-grey-light);
-    line-height: 3rem;
-    margin: 0 auto 3.5rem auto;
-    width: 80%;
+  width: 85%;
+  margin: 0 auto 2.5rem auto;
+  text-align: center;
+  line-height: 3rem;
+  color: rgb(100, 100, 108);
 }
+
 .faqs__toggle {
-    width: 80%;
-    margin: 0 auto;
+  text-align: center;
 }
 .faqs__toggle details {
-    font-size: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--color-grey-lightest);
-
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgb(150, 150, 150);
 }
-.faqs__toggle details summary {
-    font-weight: 700;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+.faqs__toggle summary {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: rgb(50, 50, 51);
 }
-summary:hover{
-    color: var(--color-red-light);
+.faqs__toggle p {
+  color: rgb(100, 100, 108);
+  line-height: 3.5rem;
 }
-summary .icon {
-    color: var(--color-blue-light);
+.faqs__toggle .btn-info {
+  margin: 5rem auto 0 auto;
 }
-.faqs__toggle details[open] summary img {
-    transform: rotate(180deg);
-    filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
-}
-.faqs__toggle details p {
-    font-weight: 500;
-    color: var(--color-grey-dark);
-    line-height: 2.75rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-top: 2.5rem;
-}
-.btn-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3.5rem auto 0 auto;
-}
-@media (min-width: 769px) {
-    .faqs__info {
-        width: 50%;
-        margin: 0 auto;
-    }
-    .faqs__toggle {
-        width: 30%;
-    }
-}
-*/
 
 /*# sourceMappingURL=style.css.map */

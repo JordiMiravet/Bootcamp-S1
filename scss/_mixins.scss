@@ -13,3 +13,18 @@
         background-color: darken($bg-color, 5%);
     }
 }
+ 
+@mixin tittle-section-center() {
+    width: 85%;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    font-size: 3.5rem;
+    color: $color-blue-dark;
+}
+@mixin text-section-center() {
+    width: 85%;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    line-height: 3rem;
+    color: $color-grey-dark;
+}
