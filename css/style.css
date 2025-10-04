@@ -273,7 +273,7 @@ img {
     margin: 0;
   }
 }
-/* Utilidades */
+/* Buttons */
 .btn-primary,
 .btn-card-install,
 .btn-download-chrome,
@@ -416,6 +416,28 @@ img {
   margin: 0 auto;
 }
 
+.hero__image {
+  position: relative;
+  width: 100%;
+  max-width: 100rem;
+  margin-bottom: 2.5rem;
+}
+.hero__image::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+  height: 80%;
+  background-color: rgb(83, 104, 223);
+  border-radius: 0 0 0 15rem;
+  z-index: -1;
+}
+.hero__image img {
+  width: 100%;
+  max-width: 50rem;
+}
+
 /* Features section */
 .features {
   display: block;
@@ -470,8 +492,25 @@ img {
 }
 
 .bookmark__image {
-  margin: 0 auto 7.5rem auto;
+  text-align: center;
+  margin-bottom: 10rem;
   width: 80%;
+  margin: 0 auto 7.5rem auto;
+  position: relative;
+}
+.bookmark__image::before {
+  content: "";
+  position: absolute;
+  bottom: -2.5rem;
+  left: -15rem;
+  width: 110%;
+  height: 95%;
+  background-color: rgb(83, 104, 223);
+  border-radius: 0 0 15rem;
+  z-index: -1;
+}
+.bookmark__image img {
+  width: 90%;
 }
 
 .bookmark__content h2 {
@@ -548,11 +587,21 @@ img {
   padding: 1.5rem 0;
   border-bottom: 1px solid rgb(150, 150, 150);
 }
+.faqs__toggle details[open] summary img {
+  transform: rotate(180deg);
+  filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
+}
 .faqs__toggle summary {
   display: flex;
   justify-content: space-between;
   font-weight: 500;
   color: rgb(50, 50, 51);
+}
+.faqs__toggle summary img {
+  width: 1.5rem;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .faqs__toggle p {
   color: rgb(100, 100, 108);
