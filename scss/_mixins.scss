@@ -1,3 +1,5 @@
+/* Buttons */
+
 @mixin button($bg-color, $text-color, $padding: 1.5rem 3rem, $border-radius: 0.5rem) {
     background-color: $bg-color;
     color: $text-color;
@@ -13,12 +15,22 @@
         background-color: darken($bg-color, 5%);
     }
 }
- 
-@mixin tittle-section-center() {
+/* Display */
+
+@mixin flex-column-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Others */
+
+@mixin tittle-section-center($font-size: 3rem) {
     width: 85%;
     margin: 0 auto 2.5rem auto;
     text-align: center;
-    font-size: 3.5rem;
+    font-size:  $font-size;
     color: $color-blue-dark;
 }
 @mixin text-section-center() {

@@ -7,21 +7,21 @@
 @import 'components';
 
 /* Hero section*/
+
 .hero {
     display: block;
     margin-bottom: 15rem;
 }
 .hero__content {
     h2 {
-        @include tittle-section-center();
+        @include tittle-section-center(3.5rem);
     }
     p{
         @include text-section-center()
     }
     .hero__buttons-box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-column-center();
+        flex-direction: row;
         gap: 2rem;
         margin: 0 auto;
     }
@@ -60,6 +60,7 @@
         font-size: 2.25rem;
         font-weight: 700;
         color: $color-grey-dark;
+        border-bottom: .5rem solid transparent;
         &:hover {
             color: $color-grey-darkest;
             border-bottom: .5rem solid $color-red-light;
@@ -67,6 +68,7 @@
     }
 }
 /* Bookmark section */
+
 .bookmark {
     margin: 0 auto 17.5rem auto;
 }
@@ -87,6 +89,7 @@
 }
 
 /* Download section */
+
 .download {
     margin-bottom: 15rem;
 }
@@ -99,9 +102,7 @@
     }
 }
 .download__cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center();
     flex-direction: column;
     gap: 5rem;
     width: 80%;
@@ -109,6 +110,7 @@
 }
 
 /* FAQ section */
+
 .faqs {
     margin-bottom: 15rem;
 }
@@ -138,6 +140,7 @@
     p {
         color: $color-grey-dark;
         line-height: 3.5rem;
+        text-align: left;
     }
     .btn-info {
         margin: 5rem auto 0 auto;

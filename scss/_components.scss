@@ -2,14 +2,13 @@
 
 .btn-primary,
 .btn-card-install {
-    margin: 0;
-    padding: 1.5rem 3rem;
-    border: none;
-    border-radius: .5rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.25s;
-    box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
+    @include button($color-white, $color-black)
+}
+.btn-download-firefox {
+    border: 2px solid transparent;
+    &:hover {
+        border: 2px solid $color-black;
+    }
 }
 .btn-download-chrome,
 .btn-bookmark,
@@ -17,9 +16,18 @@
 .btn-info {
     background-color: $color-blue-light;
     color: $color-white;
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+        border: 2px solid $color-blue-light;
+    }
 }
 
+
+
+
 /* Card */
+
 .card {
     display: grid;
     grid-template-columns: 1fr;
@@ -54,7 +62,6 @@
             border: 2px solid $color-blue-light;
         }
     }
-
 }
 
 
