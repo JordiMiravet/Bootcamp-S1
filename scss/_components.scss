@@ -1,29 +1,41 @@
 /* Utilidades */
 
 .btn-primary,
-.btn-card-install {
-    @include button($color-white, $color-black)
+.btn-card-install,
+.btn-download-chrome,
+.btn-bookmark,
+.btn-info {
+    @include button($color-blue-light, $color-white);
 }
-.btn-download-firefox {
-    border: 2px solid transparent;
-    &:hover {
-        border: 2px solid $color-black;
-    }
-}
+
 .btn-download-chrome,
 .btn-bookmark,
 .btn-card-install,
 .btn-info {
-    background-color: $color-blue-light;
-    color: $color-white;
     &:hover {
         background-color: $color-white;
         color: $color-black;
         border: 2px solid $color-blue-light;
     }
 }
-
-
+.btn-download-firefox {
+    @include button(transparent, $color-black);
+    border: 2px solid transparent;
+    &:hover {
+        border: 2px solid $color-black;
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+.btn-bookmark {
+    display: none;
+}
+.btn-info {
+    margin: 5rem auto 0 auto;
+}
+.btn-contact {
+    @include button($color-red-light, $color-white);
+}
 
 
 /* Card */

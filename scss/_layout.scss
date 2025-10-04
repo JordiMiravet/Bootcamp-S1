@@ -151,9 +151,7 @@
         border: 1px solid transparent;
         border-radius: .5rem
     }
-    .btn-contact {
-        @include button($color-red-light, $color-white);
-    }
+    
 }
 .footer__navbar {
     background-color: $color-blue-dark;

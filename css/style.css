@@ -6,7 +6,7 @@
 /* Fuente */
 /* Buttons */
 /* Display */
-/* Others */
+/* Text */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -201,20 +201,6 @@ img {
   border: 1px solid transparent;
   border-radius: 0.5rem;
 }
-.footer__form .btn-contact {
-  background-color: rgb(250, 87, 87);
-  color: #fff;
-  padding: 1.5rem 3rem;
-  border-radius: 0.5rem;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.25s;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-.footer__form .btn-contact:hover {
-  background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
-}
 
 .footer__navbar {
   background-color: rgba(37, 43, 70, 0.95);
@@ -289,9 +275,12 @@ img {
 }
 /* Utilidades */
 .btn-primary,
-.btn-card-install {
-  background-color: #fff;
-  color: #000;
+.btn-card-install,
+.btn-download-chrome,
+.btn-bookmark,
+.btn-info {
+  background-color: rgb(83, 104, 223);
+  color: #fff;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
   border: none;
@@ -301,24 +290,13 @@ img {
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .btn-primary:hover,
-.btn-card-install:hover {
-  background-color: rgb(242.25, 242.25, 242.25);
+.btn-card-install:hover,
+.btn-download-chrome:hover,
+.btn-bookmark:hover,
+.btn-info:hover {
+  background-color: rgb(61.5, 85.125, 219);
 }
 
-.btn-download-firefox {
-  border: 2px solid transparent;
-}
-.btn-download-firefox:hover {
-  border: 2px solid #000;
-}
-
-.btn-download-chrome,
-.btn-bookmark,
-.btn-card-install,
-.btn-info {
-  background-color: rgb(83, 104, 223);
-  color: #fff;
-}
 .btn-download-chrome:hover,
 .btn-bookmark:hover,
 .btn-card-install:hover,
@@ -326,6 +304,50 @@ img {
   background-color: #fff;
   color: #000;
   border: 2px solid rgb(83, 104, 223);
+}
+
+.btn-download-firefox {
+  background-color: transparent;
+  color: #000;
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+.btn-download-firefox:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn-download-firefox:hover {
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-bookmark {
+  display: none;
+}
+
+.btn-info {
+  margin: 5rem auto 0 auto;
+}
+
+.btn-contact {
+  background-color: rgb(250, 87, 87);
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.btn-contact:hover {
+  background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
 }
 
 /* Card */
