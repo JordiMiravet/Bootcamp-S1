@@ -10,6 +10,6 @@
     box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
     
     &:hover {
-        background-color: darken($bg-color, 10%);
+        background-color: darken($bg-color, 5%);
     }
 }
