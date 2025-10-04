@@ -83,11 +83,7 @@
     p{
         @include text-section-center()
     } 
-    .btn-bookmark {
-        display: none;
-    }
 }
-
 /* Download section */
 
 .download {
@@ -141,9 +137,6 @@
         color: $color-grey-dark;
         line-height: 3.5rem;
         text-align: left;
-    }
-    .btn-info {
-        margin: 5rem auto 0 auto;
     }
 }
 

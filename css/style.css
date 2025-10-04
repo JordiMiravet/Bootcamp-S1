@@ -488,9 +488,6 @@ img {
   line-height: 3rem;
   color: rgb(100, 100, 108);
 }
-.bookmark__content .btn-bookmark {
-  display: none;
-}
 
 /* Download section */
 .download {
@@ -561,9 +558,6 @@ img {
   color: rgb(100, 100, 108);
   line-height: 3.5rem;
   text-align: left;
-}
-.faqs__toggle .btn-info {
-  margin: 5rem auto 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
