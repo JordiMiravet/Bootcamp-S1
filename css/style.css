@@ -61,106 +61,137 @@ img {
   align-items: center;
   position: relative;
   z-index: 1001;
-  margin-bottom: 5rem;
+  margin: 0 auto 5rem auto;
   padding: 1.5rem;
   width: 90%;
-  margin: 0 auto 3.5rem auto;
 }
-.navbar .menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 1002;
-}
-.navbar .menu-toggle .bar {
-  width: 2.5rem;
-  height: 0.3rem;
-  background-color: rgb(50, 50, 51);
-  transition: 0.3s;
-}
-.navbar .nav-links {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(37, 43, 70, 0.95);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 3rem;
-  margin: 0;
-  padding: 0;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-.navbar .nav-links.show {
-  transform: translateY(0);
-}
-.navbar a {
-  font-size: 3rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
-.navbar .btn-loggin {
-  padding: 0.8rem rem;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  padding: 0.25rem;
-  color: #fff;
+.navbar .logo {
+  position: relative;
+  z-index: 1003;
 }
 
-@media (min-width: 769px) {
-  .navbar {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .menu-toggle {
+.menu-toggle,
+.close-menu {
+  background: none;
+  border: none;
+  z-index: 1004;
+  cursor: pointer;
+}
+.menu-toggle img,
+.close-menu img {
+  width: 2.5rem;
+  height: auto;
+}
+
+.close-menu {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(37, 43, 70, 0.95);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1002;
+}
+.nav-links li {
+  width: 80%;
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+.nav-links li:last-child {
+  border-bottom: none;
+}
+.nav-links li:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+.nav-links a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+.nav-links.show {
+  transform: translateY(0);
+}
+
+.btn-loggin {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 1.75rem 0;
+  margin-top: 2rem;
+  border: 2px solid #fff;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: 0.25s;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle,
+  .close-menu {
     display: none;
   }
-  .nav-links {
-    position: static;
-    height: auto;
-    width: auto;
-    background: none;
+  .navbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+  }
+  .nav-links {
+    all: unset;
+    display: flex;
+    align-items: center;
     gap: 3rem;
-    transform: none;
-    padding: 0;
+    list-style: none;
+  }
+  .nav-links li {
+    all: unset;
+    display: inline-block;
   }
   .nav-links a {
-    font-size: 1.6rem;
     color: rgb(50, 50, 51);
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
-    letter-spacing: normal;
+    transition: 0.3s;
   }
   .nav-links a:hover {
     color: rgb(250, 87, 87);
-    background-color: #fff;
   }
-  .btn-loggin {
+  .nav-links .btn-loggin {
     background-color: rgb(250, 87, 87);
     color: #fff;
-    padding: 1rem 2.5rem;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-radius: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1rem 2.5rem;
+    width: auto;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    margin-top: 0;
+    transition: 0.25s;
   }
-  .btn-loggin:hover {
-    background-color: #fff;
+  .nav-links .btn-loggin:hover {
+    background-color: transparent;
+    border-color: rgb(250, 87, 87);
     color: rgb(250, 87, 87);
-    border: 1px solid rgb(250, 87, 87);
   }
 }
 /* Footer */
@@ -739,7 +770,7 @@ img {
 .faqs__toggle details {
   width: 80%;
   margin: 0 auto;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   border-bottom: 1px solid rgb(150, 150, 150);
 }
 .faqs__toggle details[open] summary img {
@@ -749,8 +780,9 @@ img {
 .faqs__toggle summary {
   display: flex;
   justify-content: space-between;
-  font-weight: 500;
-  color: rgb(50, 50, 51);
+  text-align: left;
+  font-weight: 600;
+  color: #000;
   cursor: pointer;
 }
 .faqs__toggle summary img {
@@ -763,6 +795,20 @@ img {
   color: rgb(100, 100, 108);
   line-height: 3.5rem;
   text-align: left;
+}
+
+@media (min-width: 678px) {
+  .faqs {
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+  }
+  details:first-of-type {
+    border-top: 1px solid rgb(150, 150, 150);
+  }
+  details summary:hover {
+    color: rgb(250, 87, 87);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

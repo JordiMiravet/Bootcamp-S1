@@ -1,118 +1,130 @@
 /* Header */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-column-center(space-between);
     position: relative;
     z-index: 1001;
-    margin-bottom: 5rem;
+    margin: 0 auto 5rem auto;
     padding: 1.5rem;
     width: 90%;
-    margin: 0 auto 3.5rem auto;
-
-    .menu-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        z-index: 1002;
-
-        .bar {
-            width: 2.5rem;
-            height: 0.3rem;
-            background-color: $color-grey-darkest;
-            transition: 0.3s;
-        }
+    .logo {
+        position: relative;
+        z-index: 1003;
     }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 100vh;
-        width: 100%;
-        background-color: $color-blue-dark;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+}
+.menu-toggle,
+.close-menu {
+    background: none;
+    border: none;
+    z-index: 1004;
+    cursor: pointer;
+    img {
+        width: 2.5rem;
+        height: auto;
+    }
+}
+.close-menu {
+    display: none;
+}
+.nav-links {
+    @include flex-row-center($flex-direction: column, $gap: 0);
+    position: fixed;
+    inset: 0;
+    background-color: rgba($color-blue-dark, 0.95);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1002;
+    li {
+        width: 80%;
+        padding: 2rem 0;
         text-align: center;
-        gap: 3rem;
-        margin: 0;
-        padding: 0;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease-in-out;
-        &.show {
-            transform: translateY(0);
+        border-bottom: 1px solid rgba($color-white, 0.25);
+        &:last-child {
+            border-bottom: none;
+        }
+        &:first-of-type {
+            border-top: 1px solid rgba($color-white, 0.25);
         }
     }
     a {
-        font-size: 3rem;
+        display: block;
         color: $color-white;
         text-transform: uppercase;
-        letter-spacing: 0.15rem;  
-    }
-    .btn-loggin {
-        padding: 0.8rem rem;
-        border: 2px solid $color-white;
-        border-radius: 4px;
-        padding: .25rem;
-        color: $color-white;
+        letter-spacing: 0.5rem;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 1rem 0;
     }
 }
+.nav-links.show {
+    transform: translateY(0);
+}
+.btn-loggin {
+    color: $color-white;
+    display: block;
+    width: 100%;
+    padding: 1.75rem 0;
+    margin-top: 2rem;
+    border: 2px solid $color-white;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    transition: 0.25s;
+}
 
-@media (min-width: 769px) {
-    .navbar {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .menu-toggle {
+@media (min-width: 768px) {
+    .menu-toggle,
+    .close-menu {
         display: none;
     }
-    .nav-links {
-        position: static;
-        height: auto;         
-        width: auto;         
-        background: none;     
-        display: flex;
-        flex-direction: row;  
+
+    .navbar {
+        @include flex-row-center(space-between);
         align-items: center;
-        justify-content: center;
-        gap: 3rem;
-        transform: none;
-        padding: 0;
-
-        a{
-            font-size: 1.6rem;
-            color: $color-grey-darkest;
-            text-transform: uppercase;
-            letter-spacing: normal;
-            &:hover{
-                color: $color-red-light;
-                background-color: $color-white;
-            }
-        } 
-        
     }
-    .btn-loggin {
-        background-color: $color-red-light;
-        color: $color-white;
-        padding: 1rem 2.5rem;
-        border: 1px solid transparent; 
-        border-radius: .5rem;
-        box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
 
-        &:hover {
-            background-color: $color-white;
-            color: $color-red-light;
-            border: 1px solid $color-red-light;   
+    .nav-links {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        li {
+            all: unset;
+            display: inline-block;
         }
-    } 
+        a {
+            color: $color-grey-darkest;
+            font-size: 1.4rem;
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+            transition:0.3s;
+            &:hover {
+                color: $color-red-light;
+            }
+        }
+
+        .btn-loggin {
+            background-color: $color-red-light;
+            color: $color-white;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            padding: 1rem 2.5rem;
+            width: auto;
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            margin-top: 0;
+            transition: 0.25s ;
+            &:hover {
+                background-color: transparent;
+                border-color: $color-red-light;
+                color: $color-red-light;
+            }
+        }
+    }   
 }
 
 /* Footer */

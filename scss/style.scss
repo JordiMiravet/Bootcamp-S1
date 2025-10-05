@@ -282,19 +282,19 @@
     details {
         width: 80%;
         margin: 0 auto;
-        padding: 1.5rem 0;
+        padding: 2rem 0;
         border-bottom: 1px solid $color-grey-light;
         &[open] summary img {
-        transform: rotate(180deg);
-        filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
+            transform: rotate(180deg);
+            filter: invert(41%) sepia(80%) saturate(3307%) hue-rotate(339deg) brightness(99%) contrast(98%);
         }
-
     }
     summary {
         display: flex;
         justify-content: space-between;
-        font-weight: 500;
-        color: $color-grey-darkest;
+        text-align: left; 
+        font-weight: 600;
+        color: $color-black;
         cursor: pointer;
         img {
             width: 1.5rem;
@@ -308,4 +308,18 @@
         line-height: 3.5rem;
         text-align: left;
     }
+}
+@media (min-width: 678px) {
+    .faqs {
+        @include width-40-center();
+        margin-bottom: 15rem;
+    }
+    details {
+        &:first-of-type {
+                border-top: 1px solid $color-grey-light;
+        } 
+        summary:hover {
+                color: $color-red-light;
+        }
+    } 
 }

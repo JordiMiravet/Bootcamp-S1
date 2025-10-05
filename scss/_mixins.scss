@@ -18,16 +18,16 @@
 
 /* Display */
 
-@mixin flex-column-center() {
+@mixin flex-column-center($justify-content: center, $align-items: center) {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
-@mixin flex-row-center($gap: 10rem) {
+@mixin flex-row-center($justify-content: center, $align-items: center, $flex-direction: row, $gap: 10rem) {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
     gap: $gap;
 }
 @mixin width-80-center($width: 80%, $margin: 0 auto) {

@@ -2,9 +2,31 @@
 
 const toggleBtn = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const menuIcon = toggleBtn.querySelector("img");
+const navbar = document.querySelector(".navbar");
 
 toggleBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
+  navbar.classList.toggle("menu-open");
+  document.body.classList.toggle("menu-open");
+
+  if (navLinks.classList.contains("show")) {
+    menuIcon.src = "./images/icon-close.svg";
+    toggleBtn.setAttribute("aria-label", "Cerrar menú de navegación");
+  } else {
+    menuIcon.src = "./images/icon-hamburger.svg";
+    toggleBtn.setAttribute("aria-label", "Abrir menú de navegación");
+  }
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    navbar.classList.remove("menu-open");
+    document.body.classList.remove("menu-open");
+    menuIcon.src = "./images/icon-hamburger.svg";
+    toggleBtn.setAttribute("aria-label", "Abrir menú de navegación");
+  });
 });
 
 const tabsData = [
