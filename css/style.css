@@ -288,6 +288,7 @@ img {
   cursor: pointer;
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
 }
 .btn-primary:hover,
 .btn-card-install:hover,
@@ -317,6 +318,7 @@ img {
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
+  border: 2px solid transparent;
 }
 .btn-download-firefox:hover {
   background-color: rgba(0, 0, 0, 0);
@@ -345,6 +347,7 @@ img {
   cursor: pointer;
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
 }
 .btn-contact:hover {
   background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
@@ -356,9 +359,8 @@ img {
   grid-template-columns: 1fr;
   border-radius: 1rem;
   box-shadow: 0rem 0rem 2.5rem 0rem rgba(0, 124, 169, 0.35);
-  min-width: 25rem;
-  min-height: 30rem;
   margin: 0 auto;
+  min-width: 25rem;
   text-align: center;
 }
 .card .card__logo {
@@ -394,10 +396,10 @@ img {
 }
 
 .hero__content h2 {
-  width: 85%;
+  width: 3.5rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .hero__content p {
@@ -438,6 +440,43 @@ img {
   max-width: 50rem;
 }
 
+@media (min-width: 678px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__content {
+    width: 50%;
+  }
+  .hero__content h2 {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .hero__content p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .hero__content .hero__buttons-box {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .hero__image {
+    order: 1;
+    width: 50%;
+  }
+  .hero__image img {
+    width: 100%;
+    min-width: 90%;
+  }
+}
 /* Features section */
 .features {
   display: block;
@@ -480,12 +519,50 @@ img {
   font-weight: 700;
   color: rgb(100, 100, 108);
   border-bottom: 0.5rem solid transparent;
+  cursor: pointer;
 }
 .features__tabs .tabs__btn:hover {
   color: rgb(50, 50, 51);
   border-bottom: 0.5rem solid rgb(250, 87, 87);
 }
 
+@media (min-width: 678px) {
+  .features {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 7.5rem;
+  }
+  .features__info {
+    border-bottom: none;
+  }
+  .features__info p {
+    width: 60%;
+    margin-bottom: 7.5rem;
+  }
+  .features__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+  }
+  .features__tabs .tabs__box:first-of-type {
+    border-top: none;
+  }
+  .tabs__btn {
+    padding: 2.5rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .tabs__btn.active {
+    color: rgb(100, 100, 108);
+    border-bottom: 0.5rem solid rgb(250, 87, 87);
+  }
+  .tabs__btn:hover:not(.active) {
+    color: rgb(250, 87, 87);
+    border-bottom: 0.5rem solid transparent;
+  }
+}
 /* Bookmark section */
 .bookmark {
   margin: 0 auto 17.5rem auto;
@@ -502,7 +579,7 @@ img {
   content: "";
   position: absolute;
   bottom: -2.5rem;
-  left: -15rem;
+  left: -20vw;
   width: 110%;
   height: 95%;
   background-color: rgb(83, 104, 223);
@@ -528,6 +605,46 @@ img {
   color: rgb(100, 100, 108);
 }
 
+@media (min-width: 678px) {
+  .bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10rem;
+    width: 80%;
+    margin: 0 auto 15rem auto;
+  }
+  .bookmark__image {
+    width: 50%;
+  }
+  .bookmark__image img {
+    width: 100%;
+    min-width: 95%;
+  }
+  .bookmark__content {
+    width: 50%;
+  }
+  .bookmark__content h2 {
+    width: 85%;
+    margin: 0 auto 2.5rem 0;
+    text-align: left;
+    font-size: 3rem;
+    color: rgba(37, 43, 70, 0.95);
+    margin-left: 0;
+  }
+  .bookmark__content p {
+    width: 85%;
+    margin: 0 auto 2.5rem 0;
+    text-align: left;
+    line-height: 3rem;
+    color: rgb(100, 100, 108);
+    margin-left: 0;
+  }
+  .bookmark__content .btn-bookmark {
+    display: block;
+  }
+}
 /* Download section */
 .download {
   margin-bottom: 15rem;
@@ -558,6 +675,38 @@ img {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .download__info {
+    margin-bottom: 7.5rem;
+  }
+  .download__info p {
+    width: 35%;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    line-height: 3rem;
+    color: rgb(100, 100, 108);
+  }
+  .download__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2.5rem;
+    width: 60%;
+  }
+  .download__cards .card:nth-child(1) {
+    margin-top: 0;
+    margin-bottom: 10rem;
+  }
+  .download__cards .card:nth-child(2) {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .download__cards .card:nth-child(3) {
+    margin-top: 10rem;
+    margin-bottom: 0;
+  }
+}
 /* FAQ section */
 .faqs {
   margin-bottom: 15rem;

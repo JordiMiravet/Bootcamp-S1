@@ -10,33 +10,52 @@
     cursor: pointer;
     transition: .25s;
     box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
-    
+    border: 2px solid transparent;
     &:hover {
         background-color: darken($bg-color, 5%);
     }
 }
+
 /* Display */
 
 @mixin flex-column-center() {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+@mixin flex-row-center($gap: 10rem) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin width-80-center($width: 80%, $margin: 0 auto) {
+    width: $width;
+    margin: $margin;
+}
+@mixin width-60-center() {
+    width: 60%;
+    margin: 0 auto;
+}
+@mixin width-40-center() {
+    width: 40%;
+    margin: 0 auto;
 }
 
 /* Text */
 
-@mixin tittle-section-center($font-size: 3rem) {
-    width: 85%;
-    margin: 0 auto 2.5rem auto;
-    text-align: center;
+@mixin tittle-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center, $font-size: 3rem ) {
+    width: $width;
+    margin: $margin;
+    text-align: $text-align;
     font-size:  $font-size;
     color: $color-blue-dark;
 }
-@mixin text-section-center() {
-    width: 85%;
-    margin: 0 auto 2.5rem auto;
-    text-align: center;
+@mixin text-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center) {
+    width: $width;
+    margin: $margin;
+    text-align: $text-align;
     line-height: 3rem;
     color: $color-grey-dark;
 }
