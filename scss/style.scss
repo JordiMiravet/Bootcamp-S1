@@ -14,7 +14,7 @@
 }
 .hero__content {
     h2 {
-        @include tittle-section(3.5rem);
+        @include tittle-section($font-size: 3.5rem);
     }
     p{
         @include text-section()
@@ -56,13 +56,12 @@
         width: 50%;
         h2 {
             @include width-60-center();
-            text-align: left;
-            margin-bottom: 2rem
+            @include tittle-section($width: 60%, $text-align: left, $font-size: 3.5rem, $color: $color-blue-dark);
         }
         p {
             @include width-60-center();
-            text-align: left;
-            margin-bottom: 2rem
+            @include text-section($width: 60%, $text-align: left, $color: $color-blue-dark);
+            
         }
         .hero__buttons-box {
             @include width-60-center();
@@ -80,7 +79,6 @@
         }  
     }
 }
-
 
 /* Features section */
 
@@ -240,6 +238,7 @@
     width: 80%;
     margin: 0 auto;
 }
+
 @media (min-width: 768px) {
     .download__info {
         margin-bottom: 7.5rem;
@@ -296,6 +295,7 @@
         justify-content: space-between;
         font-weight: 500;
         color: $color-grey-darkest;
+        cursor: pointer;
         img {
             width: 1.5rem;
             height: auto;

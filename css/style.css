@@ -396,10 +396,10 @@ img {
 }
 
 .hero__content h2 {
-  width: 3.5rem;
+  width: 85%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .hero__content p {
@@ -452,14 +452,20 @@ img {
   .hero__content h2 {
     width: 60%;
     margin: 0 auto;
+    width: 60%;
+    margin: 0 auto 2.5rem auto;
     text-align: left;
-    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    color: rgba(37, 43, 70, 0.95);
   }
   .hero__content p {
     width: 60%;
     margin: 0 auto;
+    width: 60%;
+    margin: 0 auto 2.5rem auto;
     text-align: left;
-    margin-bottom: 2rem;
+    line-height: 3rem;
+    color: rgb(100, 100, 108);
   }
   .hero__content .hero__buttons-box {
     width: 60%;
@@ -745,6 +751,7 @@ img {
   justify-content: space-between;
   font-weight: 500;
   color: rgb(50, 50, 51);
+  cursor: pointer;
 }
 .faqs__toggle summary img {
   width: 1.5rem;

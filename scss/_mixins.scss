@@ -45,14 +45,14 @@
 
 /* Text */
 
-@mixin tittle-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center, $font-size: 3rem ) {
+@mixin tittle-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center, $font-size: 3rem, $color: $color-blue-dark ) {
     width: $width;
     margin: $margin;
     text-align: $text-align;
     font-size:  $font-size;
     color: $color-blue-dark;
 }
-@mixin text-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center) {
+@mixin text-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center, $color: $color-grey-dark) {
     width: $width;
     margin: $margin;
     text-align: $text-align;
