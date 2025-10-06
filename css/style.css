@@ -568,7 +568,6 @@ img {
     }
 }
 
-
 /* FAQ section */
 
 .faqs {
@@ -653,7 +652,7 @@ summary .icon {
 
 .footer__contact {
     background-color: var(--color-blue-light);
-    padding: 7.5rem 0;
+    padding: 10rem 0 7.5rem 0;
     text-align: center;
     color: var(--color-white);
 }
@@ -672,14 +671,59 @@ summary .icon {
     display: block;
     width: 80%;
     margin: 0 auto;
+    gap: 10rem;
+}
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 .input-wrapper input {
-    border: none;
-    border-radius: .5rem;
     padding: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-grey-light);
+}
+.input-wrapper.invalid {
+    margin-bottom: 2.5rem; 
+}
+
+.input-wrapper.invalid input {
+    border: 1px solid var(--color-red-light);
+    background-color: var(--color-white);
+    color: var(--color-white);
+  
+}
+.input-wrapper.invalid input::placeholder {
+    color: var(--color-grey-dark);
+}
+.error-icon{
+    display: none;
+}
+.input-wrapper.invalid .error-msg,
+.input-wrapper.invalid .error-icon {
+    display: block;
+    position: absolute;
+}
+.input-wrapper.invalid .error-icon {
+    right: 1rem;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-bottom: 2rem;
+}
+.input-wrapper.invalid .error-msg {
+    display: block;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
     width: 100%;
+    color: var(--color-white);
+    background-color: var(--color-red-light);
+    font-size: 1.25rem;
+    text-align: left;
+    padding: .75rem;
+    margin: 0;
+    border-radius: 0 0 .5rem .5rem;
 }
 .btn-contact {
     background-color: var(--color-red-light);
@@ -690,7 +734,7 @@ summary .icon {
     font-weight: 700;
     cursor: pointer;
     transition: 0.25s;
-    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
+    margin-top: 1.5rem;
 }
 .btn-contact:hover {
     background-color: var(--color-white);
@@ -748,12 +792,15 @@ summary .icon {
         margin: 0 auto;
         gap: 1rem;
     }
-    .footer__form input{
+    .input-wrapper input{
         margin: 0;
         padding: 1.75rem;
     }
+    .input-wrapper.invalid {
+        margin-bottom: 0; 
+    }
     .btn-contact {
-        margin: 0;
+        margin-top: 0;
         padding: 1.75rem;
     }
     .footer__navbar-box {
