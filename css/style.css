@@ -673,7 +673,7 @@ summary .icon {
     width: 80%;
     margin: 0 auto;
 }
-.footer__form input {
+.input-wrapper input {
     border: none;
     border-radius: .5rem;
     padding: 1.75rem;
