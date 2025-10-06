@@ -137,8 +137,12 @@
         <div class="footer__contact" role="region" aria-label="Sección de contacto">
             <h3>35,000+ Already Joined</h3>
             <h2>Stay up-to-date with what we're doing</h2>
-            <form class="footer__form" id="contact" role="form" aria-label="Formulario de contacto">
-                <input type="email" placeholder="Enter your email address" pattern=".+@gmail\.com" aria-label="Introducir dirección de correo electrónico" required>
+            <form class="footer__form" id="contact" role="form" aria-label="Formulario de contacto" novalidate>
+                <div class="input-wrapper">
+                    <input id="email" type="email" placeholder="Enter your email address" required>
+                    <span class="error-icon" aria-hidden="true"><img src="./images/icon-error.svg" alt="Icono de error"></span>
+                    <p id="email-error" class="error-msg" aria-live="polite" hidden></p>
+                </div>
                 <button type="submit" class="btn-primary btn-contact" aria-label="Enviar correo electrónico">Contact Us</button>
             </form>
         </div>

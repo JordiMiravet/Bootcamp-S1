@@ -29,6 +29,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
+
 const tabsData = [
   {
     img: "./images/illustration-features-tab-1.svg",
@@ -48,7 +49,6 @@ const tabsData = [
 ];
 
 const tabButtons = document.querySelectorAll(".tabs__btn");
-
 const bookmarkImg = document.querySelector(".bookmark__image img");
 const bookmarkTitle = document.querySelector(".bookmark__content h2");
 const bookmarkText = document.querySelector(".bookmark__content p");
@@ -60,7 +60,55 @@ tabButtons.forEach((btn, index) => {
     bookmarkText.textContent = tabsData[index].text;
 
     tabButtons.forEach(b => b.classList.remove("active"));
-
     btn.classList.add("active");
   });
+});
+
+
+const form = document.getElementById('contact');
+const email = document.getElementById('email');
+const wrapper = email.closest('.input-wrapper');
+const errMsg = document.getElementById('email-error');
+
+
+form.setAttribute('novalidate', true);
+
+
+form.addEventListener('submit', (e) => {
+  if (!email.checkValidity()) {
+    e.preventDefault();
+    showError();
+  }
+});
+
+
+function showError() {
+  let message = '';
+
+  if (email.validity.valueMissing) {
+    message = 'Por favor introduce tu correo electrónico.';
+  } else if (email.validity.typeMismatch) {
+    message = 'Formato incorrecto. Usa example@dominio.com';
+  } else if (email.validity.patternMismatch) {
+    message = 'El correo no cumple el patrón requerido.';
+  } else {
+    message = 'Correo no válido.';
+  }
+
+  wrapper.classList.add('invalid');
+  errMsg.textContent = message;
+  errMsg.hidden = false;
+  email.setAttribute('aria-invalid', 'true');
+  email.setAttribute('aria-describedby', 'email-error');
+}
+
+
+email.addEventListener('input', () => {
+  if (email.checkValidity()) {
+    wrapper.classList.remove('invalid');
+    errMsg.textContent = '';
+    errMsg.hidden = true;
+    email.removeAttribute('aria-invalid');
+    email.removeAttribute('aria-describedby');
+  }
 });

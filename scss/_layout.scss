@@ -1,7 +1,7 @@
 /* Header */
 
 .navbar {
-    @include flex-column-center(space-between);
+    @include flex-space($justify-content: space-between, $flex-direction: row);
     position: relative;
     z-index: 1001;
     margin: 0 auto 5rem auto;
@@ -27,7 +27,7 @@
     display: none;
 }
 .nav-links {
-    @include flex-row-center($flex-direction: column, $gap: 0);
+    @include flex-space($flex-direction: column, $gap: 0);
     position: fixed;
     inset: 0;
     background-color: rgba($color-blue-dark, 0.95);
@@ -82,7 +82,7 @@
     }
 
     .navbar {
-        @include flex-row-center(space-between);
+        @include flex-space($justify-content: space-between);
         align-items: center;
     }
 
@@ -132,20 +132,23 @@
 .footer__navbar {
     display: block;
 }
+
 .footer__contact {
     background-color: $color-blue-light;
     padding: 10rem 0 7.5rem 0;
-    h3{
+
+    h3 {
         width: 80%;
         color: $color-white;
         font-weight: 700;
         font-size: 1.25rem;
         text-transform: uppercase;
-        letter-spacing: .5rem;
+        letter-spacing: 0.5rem;
         text-align: center;
         margin: 0 auto 3.5rem auto;
     }
-    h2{
+
+    h2 {
         width: 80%;
         color: $color-white;
         font-size: 2.5rem;
@@ -153,17 +156,61 @@
         margin: 0 auto 5rem auto;
     }
 }
+
 .footer__form {
     width: 80%;
     margin: 0 auto;
     display: grid;
     gap: 1rem;
-    input {
-        padding: 1.5rem;
-        border: 1px solid transparent;
-        border-radius: .5rem
-    }  
+
+    .input-wrapper {
+        position: relative;
+        width: 100%;
+
+        input {
+            width: 100%;
+            padding: 1rem 4rem 1rem 1.25rem;
+            border: 1px solid transparent;
+            border-radius: none;
+            font-size: 1rem;
+            outline: none;
+        }
+    }
+    .input-wrapper.invalid input {
+        border-color: $color-red-light;
+        background-color: rgba($color-red-light, 0.1);
+    }
+    .error-icon {
+        display: none;
+        position: absolute;
+        right: 1rem;
+        top: 25%;
+        transform: translateY(-50%);
+        width: 1.75rem;
+        height: 1.75rem;
+        pointer-events: none;
+    }
+    .input-wrapper.invalid .error-icon {
+        display: block;
+    }
+    .error-msg {
+        margin-top: 0;
+        padding: 0.75rem;
+        font-size: 0.875rem;
+        border-radius: 0 0 .5rem .5rem;
+        color: $color-white;
+        display: none;
+        height: auto;
+        background-color: $color-red-light;
+    }
+    .input-wrapper.invalid .error-msg {
+        display: block;
+    }
+    
 }
+
+/* Footer */
+
 .footer__navbar {
     background-color: $color-blue-dark;
 }
@@ -173,25 +220,24 @@
     text-align: center;
     li {
         margin: 3rem;
-        a{
+        a {
             color: $color-white;
             letter-spacing: 0.25rem;
             text-transform: uppercase;
-            
+            transition: 0.3s;
             &:hover {
                 color: $color-red-light;
             }
         }
-        img{
-           width: 100%; 
-           max-width: 17.5rem;    
-        } 
+        img {
+            width: 100%;
+            max-width: 17.5rem;
+        }
     }
+
     .footer__social {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
+        @include flex-space($flex-direction: row, $gap: 2rem);
+        
         img {
             width: 3.5rem;
             min-width: 100%;
@@ -200,41 +246,40 @@
 }
 
 @media (min-width: 769px) {
-    .footer__navbar{
+    .footer__navbar {
         padding: 0;
     }
     .footer__contact {
         h3 {
             font-size: 1.5rem;
         }
+
         h2 {
             font-size: 3.5rem;
             width: 30%;
-        } 
+        }
     }
     .footer__form {
         display: grid;
         grid-template-columns: 2.5fr 1fr;
+        align-items: start;
         width: 40%;
     }
     .footer__navbar-box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-space($justify-content: space-between);
         width: 80%;
         margin: 0 auto;
-        text-align: center;
         padding: 3.5rem;
-
+        nav {
+            img {
+                min-width: 15rem;
+            }
+        }
         ul {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: row;
-            gap: 5rem;
+            @include flex-space($justify-content: flex-start, $gap: 5rem);
         }
         li {
-            margin: 0; 
-        }  
+            margin: 0;
+        }
     }
 }

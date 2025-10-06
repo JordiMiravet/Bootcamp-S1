@@ -1,16 +1,16 @@
 /* Buttons */
 
-.btn-primary,
-.btn-card-install,
-.btn-download-chrome,
-.btn-bookmark,
+.btn-primary, 
+.btn-card-install, 
+.btn-download-chrome, 
+.btn-bookmark, 
 .btn-info {
     @include button($color-blue-light, $color-white);
 }
 
 .btn-download-chrome,
-.btn-bookmark,
 .btn-card-install,
+.btn-bookmark,
 .btn-info {
     &:hover {
         background-color: $color-white;
@@ -18,6 +18,7 @@
         border: 2px solid $color-blue-light;
     }
 }
+
 .btn-download-firefox {
     @include button(transparent, $color-black);
     border: 2px solid transparent;
@@ -35,6 +36,62 @@
 }
 .btn-contact {
     @include button($color-red-light, $color-white);
+    background-color: $color-red-light;
+    color: $color-white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: darken($color-red-light, 10%);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .btn-loggin {
+        @include button($color-red-light, $color-white);
+        border: 2px solid transparent;
+        padding: 1rem 2.5rem;
+        width: auto;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        margin-top: 0;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $color-red-light;
+            color: $color-red-light;
+        }
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .btn-loggin {
+        @include button($color-red-light, $color-white);
+        border: 2px solid transparent;
+        padding: 1rem 2.5rem;
+        width: auto;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+        margin-top: 0;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $color-red-light;
+            color: $color-red-light;
+        }
+    }
 }
 
 

@@ -18,12 +18,7 @@
 
 /* Display */
 
-@mixin flex-column-center($justify-content: center, $align-items: center) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
-@mixin flex-row-center($justify-content: center, $align-items: center, $flex-direction: row, $gap: 10rem) {
+@mixin flex-space($justify-content: center, $align-items: center, $flex-direction: row, $gap: 0) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;

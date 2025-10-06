@@ -20,9 +20,7 @@
         @include text-section()
     }
     .hero__buttons-box {
-        @include flex-column-center();
-        flex-direction: row;
-        gap: 2rem;
+        @include flex-space($flex-direction: row, $gap: 1rem);
         margin: 0 auto;
     }
 }
@@ -48,9 +46,11 @@
     }
 }
 
+
+
 @media (min-width: 678px) {
     .hero {
-        @include flex-column-center(); 
+        @include flex-space($flex-direction: row); 
     }
     .hero__content {
         width: 50%;
@@ -65,9 +65,7 @@
         }
         .hero__buttons-box {
             @include width-60-center();
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            @include flex-space($justify-content: flex-start, $gap: 1.5rem);
         }
     }
     .hero__image {
@@ -114,6 +112,7 @@
         font-weight: 700;
         color: $color-grey-dark;
         border-bottom: .5rem solid transparent;
+        background-color: transparent;
         cursor: pointer;
         &:hover {
             color: $color-grey-darkest;
@@ -135,7 +134,7 @@
         border-bottom: none;
     }
     .features__tabs {
-        @include flex-row-center($gap: 0);
+        @include flex-space($gap: 0);
         .tabs__box:first-of-type {
             border-top: none;
         } 
@@ -158,6 +157,7 @@
 /* Bookmark section */
 
 .bookmark {
+    
     margin: 0 auto 17.5rem auto;
 }
 .bookmark__image {
@@ -192,7 +192,7 @@
 
 @media (min-width: 678px) {
     .bookmark {
-        @include flex-row-center(); 
+        @include flex-space($gap: 10rem); 
         @include width-80-center($margin: 0 auto 15rem auto); 
     }
     .bookmark__image {
@@ -232,9 +232,7 @@
     }
 }
 .download__cards {
-    @include flex-column-center();
-    flex-direction: column;
-    gap: 5rem;
+    @include flex-space($flex-direction: column, $gap: 5rem);
     width: 80%;
     margin: 0 auto;
 }
@@ -247,7 +245,7 @@
         }
     }
     .download__cards {
-        @include flex-row-center($gap: 2.5rem);
+        @include flex-space($gap: 2.5rem);
         width: 60%;
         .card:nth-child(1) {
             margin-top: 0;
