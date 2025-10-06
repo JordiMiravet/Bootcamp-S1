@@ -21,7 +21,6 @@
 
 .btn-download-firefox {
     @include button(transparent, $color-black);
-    border: 2px solid transparent;
     &:hover {
         border: 2px solid $color-black;
         background-color: $color-white;
@@ -35,62 +34,15 @@
     margin: 5rem auto 0 auto;
 }
 .btn-contact {
-    @include button($color-red-light, $color-white);
-    background-color: $color-red-light;
-    color: $color-white;
-    border: none;
-    border-radius: 0.5rem;
+    @include button($color-red-light, $color-white, 1rem 2rem, 0.5rem, 600);
     font-size: 1rem;
-    padding: 1rem 2rem;
-    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-        background-color: darken($color-red-light, 10%);
-    }
 }
-
 
 @media (min-width: 768px) {
     .btn-loggin {
         @include button($color-red-light, $color-white);
-        border: 2px solid transparent;
-        padding: 1rem 2.5rem;
-        width: auto;
-        font-size: 1.4rem;
-        letter-spacing: 0.1rem;
-        margin-top: 0;
-        transition: 0.25s;
-
-        &:hover {
-            background-color: transparent;
-            border-color: $color-red-light;
-            color: $color-red-light;
-        }
-    }
-}
-
-
-
-@media (min-width: 768px) {
-    .btn-loggin {
-        @include button($color-red-light, $color-white);
-        border: 2px solid transparent;
-        padding: 1rem 2.5rem;
-        width: auto;
-        font-size: 1.4rem;
-        letter-spacing: 0.1rem;
-        margin-top: 0;
-        transition: 0.25s;
-
-        &:hover {
-            background-color: transparent;
-            border-color: $color-red-light;
-            color: $color-red-light;
-        }
     }
 }
 
@@ -106,8 +58,7 @@
     min-width: 25rem;
     text-align: center;
     .card__logo {
-        width: 50%;
-        margin: 7.5rem auto 0 auto;
+        @include center-item($width: 50%, $margin: 7.5rem auto 0 auto)
     }
     h2 {
         color: $color-blue-dark;
@@ -122,7 +73,7 @@
         width: 100%;
     }
     .btn-card-install {
-        margin: 2rem;
+        margin: 1.5rem;
         border: 2px solid transparent;
         &:hover {
             background-color: $color-white;

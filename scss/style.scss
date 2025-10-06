@@ -55,16 +55,16 @@
     .hero__content {
         width: 50%;
         h2 {
-            @include width-60-center();
+            @include center-item($width: 100%);
             @include tittle-section($width: 60%, $text-align: left, $font-size: 3.5rem, $color: $color-blue-dark);
         }
         p {
-            @include width-60-center();
+            @include center-item($width: 100%);
             @include text-section($width: 60%, $text-align: left, $color: $color-blue-dark);
             
         }
         .hero__buttons-box {
-            @include width-60-center();
+            @include center-item($width: 60%);
             @include flex-space($justify-content: flex-start, $gap: 1.5rem);
         }
     }
@@ -96,8 +96,7 @@
     display: grid;
     grid-template-columns: 1fr;
     .tabs__box {
-        width: 80%;
-        margin: 0 auto;
+        @include center-item($width: 80%);
         text-align: center;
         border-bottom: 1px solid $color-grey-light;
         &:first-of-type {
@@ -123,13 +122,12 @@
 
 @media (min-width: 678px) {
     .features {
-        @include width-60-center();
+        @include center-item($width: 60%);
         margin-bottom: 7.5rem;
     }
     .features__info {
         p {
-            width: 60%;
-            margin-bottom: 7.5rem;  
+            @include center-item($width: 60%, $margin: 0 auto 7.5rem auto);
         }
         border-bottom: none;
     }
@@ -161,10 +159,8 @@
     margin: 0 auto 17.5rem auto;
 }
 .bookmark__image {
+    @include center-item($width: 80%, $margin: 0 auto 7.5rem auto);
     text-align: center;
-    margin-bottom: 10rem;
-    width: 80%;
-    margin: 0 auto 7.5rem auto;
     position: relative;  
     &::before {
         content: "";
@@ -193,7 +189,7 @@
 @media (min-width: 678px) {
     .bookmark {
         @include flex-space($gap: 10rem); 
-        @include width-80-center($margin: 0 auto 15rem auto); 
+        @include center-item($width: 80%, $margin: 0 auto 15rem auto);
     }
     .bookmark__image {
         width: 50%;
@@ -233,8 +229,7 @@
 }
 .download__cards {
     @include flex-space($flex-direction: column, $gap: 5rem);
-    width: 80%;
-    margin: 0 auto;
+    @include center-item()
 }
 
 @media (min-width: 768px) {
@@ -278,8 +273,7 @@
 .faqs__toggle {
     text-align: center;
     details {
-        width: 80%;
-        margin: 0 auto;
+        @include center-item();
         padding: 2rem 0;
         border-bottom: 1px solid $color-grey-light;
         &[open] summary img {
@@ -309,8 +303,7 @@
 }
 @media (min-width: 678px) {
     .faqs {
-        @include width-40-center();
-        margin-bottom: 15rem;
+        @include center-item($width: 40%, $margin: 0 auto 15rem auto);
     }
     details {
         &:first-of-type {

@@ -1,16 +1,15 @@
 /* Buttons */
 
-@mixin button($bg-color, $text-color, $padding: 1.5rem 3rem, $border-radius: 0.5rem) {
+@mixin button($bg-color, $text-color, $padding: 1.5rem 3rem, $border-radius: 0.5rem, $font-weight: 700) {
     background-color: $bg-color;
     color: $text-color;
     padding: $padding;
     border-radius: $border-radius;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .25s;
-    box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
     border: 2px solid transparent;
+    font-weight: $font-weight;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0.5rem 0.5rem 0.5rem $color-box-shadow-grey;
     &:hover {
         background-color: darken($bg-color, 5%);
     }
@@ -25,17 +24,12 @@
     flex-direction: $flex-direction;
     gap: $gap;
 }
-@mixin width-80-center($width: 80%, $margin: 0 auto) {
+
+/* Center elements */
+
+@mixin center-item($width: 80%, $margin: 0 auto) {
     width: $width;
     margin: $margin;
-}
-@mixin width-60-center() {
-    width: 60%;
-    margin: 0 auto;
-}
-@mixin width-40-center() {
-    width: 40%;
-    margin: 0 auto;
 }
 
 /* Text */

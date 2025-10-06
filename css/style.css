@@ -6,6 +6,7 @@
 /* Fuente */
 /* Buttons */
 /* Display */
+/* Center elements */
 /* Text */
 html {
   box-sizing: border-box;
@@ -361,12 +362,11 @@ img {
   color: #fff;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
-  border: none;
+  border: 2px solid transparent;
   font-weight: 700;
   cursor: pointer;
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
 }
 .btn-primary:hover,
 .btn-card-install:hover,
@@ -390,18 +390,14 @@ img {
   color: #000;
   padding: 1.5rem 3rem;
   border-radius: 0.5rem;
-  border: none;
+  border: 2px solid transparent;
   font-weight: 700;
   cursor: pointer;
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
 }
 .btn-download-firefox:hover {
   background-color: rgba(0, 0, 0, 0);
-}
-.btn-download-firefox {
-  border: 2px solid transparent;
 }
 .btn-download-firefox:hover {
   border: 2px solid #000;
@@ -420,33 +416,21 @@ img {
 .btn-contact {
   background-color: rgb(250, 87, 87);
   color: #fff;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 0.5rem;
-  border: none;
-  font-weight: 700;
+  border: 2px solid transparent;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.25s;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-  border: 2px solid transparent;
 }
 .btn-contact:hover {
   background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
 }
 .btn-contact {
-  background-color: rgb(250, 87, 87);
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
   font-size: 1rem;
-  padding: 1rem 2rem;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.btn-contact:hover {
-  background-color: rgb(248.5260115607, 37.4739884393, 37.4739884393);
 }
 
 @media (min-width: 768px) {
@@ -455,60 +439,14 @@ img {
     color: #fff;
     padding: 1.5rem 3rem;
     border-radius: 0.5rem;
-    border: none;
+    border: 2px solid transparent;
     font-weight: 700;
     cursor: pointer;
     transition: 0.25s;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
   }
   .btn-loggin:hover {
     background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
-  }
-  .btn-loggin {
-    border: 2px solid transparent;
-    padding: 1rem 2.5rem;
-    width: auto;
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-    margin-top: 0;
-    transition: 0.25s;
-  }
-  .btn-loggin:hover {
-    background-color: transparent;
-    border-color: rgb(250, 87, 87);
-    color: rgb(250, 87, 87);
-  }
-}
-@media (min-width: 768px) {
-  .btn-loggin {
-    background-color: rgb(250, 87, 87);
-    color: #fff;
-    padding: 1.5rem 3rem;
-    border-radius: 0.5rem;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.25s;
-    box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
-  }
-  .btn-loggin:hover {
-    background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
-  }
-  .btn-loggin {
-    border: 2px solid transparent;
-    padding: 1rem 2.5rem;
-    width: auto;
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-    margin-top: 0;
-    transition: 0.25s;
-  }
-  .btn-loggin:hover {
-    background-color: transparent;
-    border-color: rgb(250, 87, 87);
-    color: rgb(250, 87, 87);
   }
 }
 /* Card */
@@ -538,7 +476,7 @@ img {
   width: 100%;
 }
 .card .btn-card-install {
-  margin: 2rem;
+  margin: 1.5rem;
   border: 2px solid transparent;
 }
 .card .btn-card-install:hover {
@@ -610,7 +548,7 @@ img {
     width: 50%;
   }
   .hero__content h2 {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     width: 60%;
     margin: 0 auto 2.5rem auto;
@@ -619,7 +557,7 @@ img {
     color: rgba(37, 43, 70, 0.95);
   }
   .hero__content p {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     width: 60%;
     margin: 0 auto 2.5rem auto;
@@ -703,7 +641,7 @@ img {
   }
   .features__info p {
     width: 60%;
-    margin-bottom: 7.5rem;
+    margin: 0 auto 7.5rem auto;
   }
   .features__info {
     border-bottom: none;
@@ -738,10 +676,9 @@ img {
 }
 
 .bookmark__image {
-  text-align: center;
-  margin-bottom: 10rem;
   width: 80%;
   margin: 0 auto 7.5rem auto;
+  text-align: center;
   position: relative;
 }
 .bookmark__image::before {
@@ -932,8 +869,7 @@ img {
 @media (min-width: 678px) {
   .faqs {
     width: 40%;
-    margin: 0 auto;
-    margin-bottom: 15rem;
+    margin: 0 auto 15rem auto;
   }
   details:first-of-type {
     border-top: 1px solid rgb(150, 150, 150);
