@@ -185,14 +185,17 @@ img {
         background-color: var(--color-red-light);
         color: var(--color-white);
         padding: 1rem 2.5rem;
-        border: 1px solid transparent; 
+        margin: 0;
+        border: 2px solid transparent; 
         border-radius: .5rem;
         box-shadow: 0.5rem 0.5rem 0.5rem var(--color-box-shadow-grey);
+        
     }
     .btn-loggin:hover {
         background-color: var(--color-white);
         color: var(--color-red-light);
-        border: 1px solid var(--color-red-light);   
+        border: 2px solid var(--color-red-light);
+          
     }
 }
 
@@ -256,7 +259,7 @@ img {
 
 .btn-download-chrome,
 .btn-download-firefox {
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     padding: 1.5rem;
 }
 .btn-download-chrome:hover,
@@ -265,11 +268,11 @@ img {
 }
 .btn-download-chrome:hover {
     color: var(--color-blue-light);
-    border: 1px solid var(--color-blue-light);
+    border: 2px solid var(--color-blue-light);
 }
 .btn-download-firefox:hover {
     color: var(--color-grey-dark);
-    border: 1px solid var(--color-grey-dark);
+    border: 2px solid var(--color-grey-dark);
 }
 
 @media (min-width: 769px) {
