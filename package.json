@@ -1,0 +1,28 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "description": "Descripció:  \r Aquest projecte és una pàgina web de presentació per a una extensió de gestor de marcadors (bookmarks). Ofereix una interfície senzilla i clara per promocionar la descàrrega de l'extensió per a diversos navegadors com Chrome, Firefox i Opera. Inclou seccions com característiques, preguntes freqüents i formulari de contacte.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordiMiravet/bookmark-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordiMiravet/bookmark-landing-page/issues"
+  },
+  "homepage": "https://github.com/JordiMiravet/bookmark-landing-page#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.14"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.14"
+  }
+}

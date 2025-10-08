@@ -1,5 +1,7 @@
 "use strict";
 
+/* Header */
+
 const toggleBtn = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const menuIcon = toggleBtn.querySelector("img");
@@ -29,6 +31,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   });
 });
 
+/* Toggle de Bookmark */
 
 const tabsData = [
   {
@@ -48,6 +51,8 @@ const tabsData = [
   }
 ];
 
+
+
 const tabButtons = document.querySelectorAll(".tabs__btn");
 const bookmarkImg = document.querySelector(".bookmark__image img");
 const bookmarkTitle = document.querySelector(".bookmark__content h2");
@@ -59,17 +64,22 @@ tabButtons.forEach((btn, index) => {
     bookmarkTitle.textContent = tabsData[index].title;
     bookmarkText.textContent = tabsData[index].text;
 
-    tabButtons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+    tabButtons.forEach(b => {
+      b.classList.remove("text-red-light", "border-b-red-light");
+      b.classList.add("text-grey-dark", "border-b-transparent");
+    });
+
+  btn.classList.add("border-b-red-light");
+  btn.classList.remove("text-grey-dark", "border-b-transparent");
   });
 });
 
+/* Formulari */
 
 const form = document.getElementById('contact');
 const email = document.getElementById('email');
 const wrapper = email.closest('.input-wrapper');
 const errMsg = document.getElementById('email-error');
-
 
 form.setAttribute('novalidate', true);
 

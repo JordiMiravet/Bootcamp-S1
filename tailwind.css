@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@theme {
+    /* Colores */
+
+    --color-white: #ffffff;
+    --color-black:  #000;
+    --color-grey-darkest: rgb(50, 50, 51);
+    --color-grey-dark: rgb(100, 100, 108);
+    --color-grey-light: rgb(150, 150, 150);
+    --color-grey-lightest: rgb(225, 225, 225);
+    
+    --color-blue-light: rgb(83, 104, 223);
+    --color-blue-dark: rgba(37, 43, 70, 0.95);
+    --color-red-light: rgb(250, 87, 87);
+    
+    --color-box-shadow-grey: rgba(0,0,0,0.1);
+    --color-box-shadow-blue: rgba(0, 124, 169, 0.35);
+
+
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 2.75rem;
+    --h3-font-size: 2rem;
+    --p-font-size: 1.75rem;
+
+    --font-family: "Arial", Helvetica, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+    margin-bottom: 5rem;
+    padding: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1002;
+}
+.menu-toggle .bar {
+    width: 2.5rem;
+    height: 0.3rem;
+    background-color: var(--color-grey-darkest);
+    transition: 0.3s;
+}
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-blue-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-links.show {
+    transform: translateY(0);
+}
+.nav-links a {
+    font-size: 3rem;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+.btn-loggin {
+    padding: 1rem;
+    border: 2px solid var(--color-white);
+    border-radius: 4px;
+    color: var(--color-white);
+}
