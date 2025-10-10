@@ -8,27 +8,19 @@ const menuIcon = toggleBtn.querySelector("img");
 const navbar = document.querySelector(".navbar");
 
 toggleBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-  navbar.classList.toggle("menu-open");
-  document.body.classList.toggle("menu-open");
+  const isHidden = navLinks.classList.contains("-translate-y-full");
 
-  if (navLinks.classList.contains("show")) {
+  if (isHidden) {
     menuIcon.src = "./images/icon-close.svg";
     toggleBtn.setAttribute("aria-label", "Cerrar menú de navegación");
+    navLinks.classList.remove("-translate-y-full");
+    navLinks.classList.add("translate-y-0");
   } else {
     menuIcon.src = "./images/icon-hamburger.svg";
     toggleBtn.setAttribute("aria-label", "Abrir menú de navegación");
+    navLinks.classList.remove("translate-y-0");
+    navLinks.classList.add("-translate-y-full");
   }
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-    navbar.classList.remove("menu-open");
-    document.body.classList.remove("menu-open");
-    menuIcon.src = "./images/icon-hamburger.svg";
-    toggleBtn.setAttribute("aria-label", "Abrir menú de navegación");
-  });
 });
 
 /* Toggle de Bookmark */
@@ -80,9 +72,9 @@ const form = document.getElementById('contact');
 const email = document.getElementById('email');
 const wrapper = email.closest('.input-wrapper');
 const errMsg = document.getElementById('email-error');
+const errorIcon = document.getElementById('errorIcon');
 
 form.setAttribute('novalidate', true);
-
 
 form.addEventListener('submit', (e) => {
   if (!email.checkValidity()) {
@@ -90,7 +82,6 @@ form.addEventListener('submit', (e) => {
     showError();
   }
 });
-
 
 function showError() {
   let message = '';
@@ -108,17 +99,21 @@ function showError() {
   wrapper.classList.add('invalid');
   errMsg.textContent = message;
   errMsg.hidden = false;
+  errorIcon.classList.remove('hidden');
   email.setAttribute('aria-invalid', 'true');
   email.setAttribute('aria-describedby', 'email-error');
+  email.classList.remove('border-white', 'rounded-md')
+  email.classList.add('border-red-light', 'rounded-b-0', 'rounded-t-md');
 }
-
 
 email.addEventListener('input', () => {
   if (email.checkValidity()) {
     wrapper.classList.remove('invalid');
+    errorIcon.classList.add('hidden');
     errMsg.textContent = '';
     errMsg.hidden = true;
     email.removeAttribute('aria-invalid');
     email.removeAttribute('aria-describedby');
+    
   }
 });

@@ -10,46 +10,75 @@
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
 <body class="m-0 p-0">
-    <header role="banner">
-        <nav class="navbar" role="navigation" aria-label="Menú principal">
-            <h1>
-                <a href="#">
-                    <img src="images/logo-bookmark.svg" alt="Logotipo de Bookmark">
-                </a>
-            </h1>
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">
-                <img src="./images/icon-hamburger.svg" alt="imagen de menú de navegación">
-            </button>
-            <ul class="nav-links" role="menubar">
-                <li><a class="" role="menuitem" href="#features">Feature</a></li>
-                <li><a class="" role="menuitem" href="#">Pricing</a></li>
-                <li><a class="" role="menuitem" href="#contact">Contact</a></li>
-                <li><a class="" role="menuitem" class="btn-loggin" href="#">Login</a></li>
+    <header role="banner"> 
+        <nav 
+        class="navbar 
+        flex justify-between items-center 
+        z-1 mb-2 p-3.5 w-[90%] mx-auto" 
+        role="navigation" 
+        aria-label="Menú principal"> 
+            <h1 class="m-0"> <a href="#"> <img class="w-50 m-0" src="images/logo-bookmark.svg" alt="Logotipo de Bookmark"> </a> </h1> 
+            <button 
+            class="menu-toggle md:hidden
+            bg-none border-0 cursor-pointer 
+            flex items-center justify-center
+            w-10 h-10 z-10 transition duration-150" 
+            aria-label="Abrir menú de navegación"> 
+                <img class="w-8" src="./images/icon-hamburger.svg" alt="imagen de menú de navegación"> 
+            </button> 
+            <ul class="nav-links
+            fixed top-0 left-0 right-0 bottom-0 h-screen w-full bg-blue-dark
+            flex flex-col justify-center items-center text-center 
+            transform -translate-y-full transition-transform duration-300
+            text-white
+            md:static md:h-auto md:w-auto md:flex-row md:justify-end md:bg-transparent 
+            md:translate-y-0 md:transform-none md:gap-6 md:items-center md:text-black"
+            role="menubar"> 
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Feature</a>
+                </li>
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Pricing</a>
+                </li>
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Contact</a>
+                </li> 
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <button 
+                    class="text-5xl md:text-sm px-10 m-auto md:m-0 md:px-4 py-2 w-full md:w-auto
+                    text-white md:bg-red-light md:text-white uppercase tracking-widest cursor-pointer  
+                    border-2  border-white md:rounded-md md:border-2 md:border-red-light
+                    md:hover:bg-white md:hover:text-red-light" 
+                    role="menuitem"
+                    >Login</button>
+                </li>
             </ul>
-        </nav>
+        </nav> 
     </header> <!-- header -->
 
     <main role="main" class="m-0 p-0">
-        <section class="mb-40 block md:flex justify-center align-middle flex-row mx-auto md:gap-8 ">
-            <div class="w-[70%] mx-auto md:order-2">
+
+        <section class="mb-40 block md:flex justify-center align-middle flex-row mx-auto md:gap-8">
+            <div class="w-[80%] mx-auto md:order-2 mb-10">
                 <img class="mx-auto" src="./images/illustration-hero.svg" alt="imagen de muestra">
             </div>
             <div class="w-[80%] mx-auto md:flex justify-center align-middle flex-col ">
                 <h2 
                 class="text-grey-darkest text-[30px] md:text-[35px] text-center md:text-start md:leading-12 
-                font-u font-bold capitalize mb-10 md:w-[75%] md:mx-auto md:mb-5 
+                font-u font-bold capitalize mb-5 md:w-[75%] md:mx-auto 
                 ">A simple bookmark manager</h2>
                 <p class="text-gray-700 text-center md:text-start text-[17.5px] mb-10 md:mb-5  md:w-[75%] md:mx-auto ">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div class=" mx-auto md:w-[75%] flex items-center justify-center text-start md:justify-start gap-4">
                     <button type="button" 
                     class="bg-blue-light text-white text-[15px] font-bold 
-                    px-2 py-3 rounded-md shadow-xl cursor-pointer
-                    border-2 border-blue-light 
+                    px-2 py-3 rounded-md  cursor-pointer
+                    border-2 border-blue-light shadow-md shadow-grey-light
                     hover:border-blue-light hover:border-2 hover:bg-white hover:text-blue-light" 
                     aria-label="Descargar extensión para Chrome">Get it on Chrome</button>
                     <button type="button" 
-                    class="bg-white text-grey-dark font-bold 
-                    px-2 py-3 rounded-md shadow-xl cursor-pointer
+                    class="bg-white text-grey-dark shadow-md shadow-grey-light
+                    px-2 py-3 rounded-md 
+                    font-bold cursor-pointer
                     border-2 border-white hover:border-grey-dark" 
                     aria-label="Descargar extensión para Firefox">Get it on Firefox</button>
                 </div>
@@ -58,34 +87,30 @@
 
         <section class="block mb-20 " id="features" role="region" aria-label="Sección de características" aria-labelledby="features-title">
             <div class="w-[80%] my-0 mx-auto mb-12 md:w-[45%] md:mx-auto">
-                <h2 class="text-grey-darkest text-[25px] md:text-[35px] text-center mb-10 font-bold">Features</h2>
+                <h2 class="mb-5 text-grey-darkest text-[25px] md:text-[35px] text-center  font-bold">Features</h2>
                 <p class="text-center text-[17.5px] text-gray-700 mb-10">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
             </div>
             <div class="grid grid-cols-3 w-[90%] my-0 mx-auto md:w-[75%]" role="tablist" aria-label="Características del producto">
-                <div 
-                class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light border-t-1 border-t-grey-light md:border-t-0 text-center">
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light border-t-1 border-t-grey-light md:border-t-0 text-center">
                     <button 
                     class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
-                     hover:border-b-4 hover:border-b-red-light hover:md:text-red-light 
-                     text-[20px] font-semibold text-grey-dark
-                     cursor-pointer" 
-                     role="tab">Simple Bookmarking</button>
-                </div>
-                <div 
-                class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
-                    <button 
-                    class="tabs__btn px-0 py-5 
-                    border-b-4 border-b-transparent hover:border-b-4 
-                    hover:md:text-red-light active:border-b-red-light
+                    hover:border-b-4 hover:md:text-red-light 
                     text-[20px] font-semibold text-grey-dark
-                    cursor-pointer " 
+                    cursor-pointer" 
+                    role="tab">Simple Bookmarking</button>
+                </div>
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
+                    <button 
+                    class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
+                    hover:border-b-4 hover:md:text-red-light 
+                    text-[20px] font-semibold text-grey-dark
+                    cursor-pointer" 
                     role="tab">Speedy Searching</button>
                 </div>
-                <div 
-                class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
                     <button 
-                    class="tabs__btn px-0 py-5 border-b-4 
-                    border-b-transparent hover:border-b-4 hover:border-b-red-light  hover:md:text-red-light
+                    class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
+                    hover:border-b-4 hover:md:text-red-light 
                     text-[20px] font-semibold text-grey-dark
                     cursor-pointer" 
                     role="tab">Easy Sharing</button>
@@ -93,12 +118,12 @@
             </div>
         </section> <!-- features -->
 
-        <section class="w-[90%] mx-auto mb-40 md:grid md:grid-cols-2 md: justify-center items-center" role="tabpanel">
+        <section class="w-[90%] mx-auto mb-20 md:grid md:grid-cols-2 md: justify-center items-center" role="tabpanel">
             <div class="bookmark__image mb-20">
                 <img class="mx-auto" src="./images/illustration-features-tab-1.svg" alt="bookmark in one click illustrator">
             </div>
             <div class="bookmark__content my-0 mx-auto text-center md:w-[70%] md:text-start">
-                <h2 class="text-grey-darkest text-[25px] text-center mb-10 md:mb-5 font-bold md:text-start ">Bookmark in one click</h2>
+                <h2 class="mb-5 text-grey-darkest text-[25px] text-center font-bold md:text-start">Bookmark in one click</h2>
                 <p class="text-[17.5px] text-center md:text-start text-gray-700 mb-10 md:mb-5">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
                 <button 
                 class="invisible md:visible bg-blue-light border-2 border-blue-light 
@@ -110,15 +135,15 @@
 
         <section class="m-0 mb-50 block" id="download" role="region" aria-label="Sección de descarga" >
             <div class="mx-auto w-auto md:mb-20">
-                <h2 class="text-grey-darkest text-3xl text-center mb-10 font-bold">Download the extension</h2>
+                <h2 class="text-grey-darkest text-[25px] text-center mb-10 font-bold">Download the extension</h2>
                 <p class="text-[17.5px] text-center text-gray-700 mb-10 w-[80%] mx-auto md:w-[45%]">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to priorize</p>
             </div>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-10 mx-auto w-full max-w-[1200px]">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-7 mx-auto w-full max-w-[1200px]">
                 <div class="min-w-65 w-65 h-auto text-center rounded-2xl shadow-2xl shadow-blue-light md:mt-0 md:mb-30" aria-label="Tarjeta de descarga para Chrome">
                     <img class="mx-auto my-4 pt-10 pb-5" src="./images/logo-chrome.svg" alt="logotipo de chrome">
                     <h2 class="mx-auto pb-4 font-bold text-[20px] text-grey-darkest">Add to Chrome</h2>
                     <p class="mx-auto pb-4 text-[15px] text-grey-dark">Minimum version 62</p>
-                    <img class="card__dots mx-auto my-5" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <img class="mx-auto my-5" src="./images/bg-dots.svg" alt="separador de funciones">
                     <button class="
                     bg-blue-light border-2 border-blue-light 
                     text-white text font-semibold
@@ -150,7 +175,7 @@
             </div>
         </section> <!-- download -->
 
-        <section class="w-80 md:w-120 mx-auto mb-25 " role="region" aria-label="Sección de preguntas frecuentes">
+        <section class="w-80 md:w-120 mx-auto mb-25" role="region" aria-label="Sección de preguntas frecuentes">
             <div class="mb-20">
                 <h2 class="text-grey-darkest text-3xl text-center mb-10 font-bold">Frequently Asked Questions</h2>
                 <p class="w-80 mx-auto text-center text-[17.5px] text-gray-700 mb-10">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
@@ -162,7 +187,7 @@
                         <img
                         src="./images/icon-arrow.svg"
                         alt="icono de despliegue"
-                        class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
                         />
                     </summary>
                     <p class="mb-5 text-gray-700 text-[15px] leading-7">
@@ -175,7 +200,7 @@
                         <img
                         src="./images/icon-arrow.svg"
                         alt="icono de despliegue"
-                        class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
                         />
                     </summary>
                     <p class="mb-5 text-gray-700 text-[15px] leading-7">
@@ -188,7 +213,7 @@
                         <img
                         src="./images/icon-arrow.svg"
                         alt="icono de despliegue"
-                        class="w-5 h-5 transition-transform duration-300 group-open:rotate-180 "
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180 "
                         />
                     </summary>
                     <p class="mb-5 text-gray-700 text-[15px] leading-7">
@@ -201,7 +226,7 @@
                         <img
                         src="./images/icon-arrow.svg"
                         alt="icono de despliegue"
-                        class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
                         />
                     </summary>
                     <p class="mb-5 text-gray-700 text-[15px] leading-7">
@@ -225,13 +250,27 @@
             <h3 
             class="text-white text-[15px] font-semibold uppercase tracking-widest mb-4">35,000+ Already Joined</h3>
             <h2 class="text-white text-2xl font-semibold w-80 mx-auto mb-5">Stay up-to-date with wshat we're doing</h2>
-            <form class="footer__form" id="contact" role="form" aria-label="Formulario de contacto" novalidate>
-                <div class="input-wrapper ">
-                    <input id="email" type="email" placeholder="Enter your email address" required>
-                    <span class="error-icon" aria-hidden="true"><img src="./images/icon-error.svg" alt="Icono de error"></span>
-                    <p id="email-error" class="error-msg" aria-live="polite" hidden></p>
+            <form class="footer__form mx-auto md:w-[50%] md:gap-2 md:grid md:grid-cols-6" id="contact" role="form" aria-label="Formulario de contacto" novalidate>
+                <div class="input-wrapper relative col-span-4">
+                    <input 
+                    class="w-[85%] p-3 mb-0 md:mx-auto rounded-md border-2 
+                    bg-white border-white" 
+                    id="email" type="email" placeholder="Enter your email address" required>
+                    <span id="errorIcon" class="error-icon absolute right-15 top-4 hidden" aria-hidden="true">
+                        <img class="" src="./images/icon-error.svg" alt="Icono de error">
+                    </span>
+                    <p id="email-error" 
+                    class="error-msg w-[85%] mx-auto my-0 pl-2.5 py-1
+                    bg-red-light rounded-b-md
+                    text-left text-white" 
+                    aria-live="polite" hidden></p>
                 </div>
-                <button type="submit" class="btn-primary btn-contact" aria-label="Enviar correo electrónico">Contact Us</button>
+                <button type="submit" 
+                class="col-span-2 w-[85%] py-3 rounded-md 
+                bg-red-light border-red-light border-2 hover:bg-white
+                font-semibold text-white hover:text-red-light
+                mt-5 md:mt-0 md:mx-auto" 
+                aria-label="Enviar correo electrónico">Contact Us</button>
             </form>
         </div>
         <div class="bg-blue-dark py-10 md:py-0">
@@ -240,12 +279,12 @@
                 role="navigation" aria-label="Enlaces de navegación del footer">
                     <ul class="text-center md:flex md:justify-center md:items-center md:flex-row md:gap-10">
                         <li class="mb-[25px] md:mb-0"><a href="#"><img class="mx-auto mb-5 md:mb-0 w-[175px]" src="./images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a></li>
-                        <li class="my-[25px] md:my-0"><a class="text-[20px] text-white uppercase tracking-widest hover:text-red-light" href="#features">Features</a></li>
-                        <li class="my-[25px] md:my-0"><a class="text-[20px] text-white uppercase tracking-widest hover:text-red-light" href="">Pricing</a></li>
-                        <li class="my-[25px] md:my-0"><a class="text-[20px] text-white uppercase tracking-widest hover:text-red-light" href="#contact">Contact</a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="#features">Features</a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="">Pricing</a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="flex justify-center align-middle gap-10 mt-[25px] md:mt-0" role="region" aria-label="Redes sociales">
+                <div class="flex justify-center align-middle gap-10 mt-[20px] md:mt-0" role="region" aria-label="Redes sociales">
                     <a href="/" aria-label="Ir a la página de Facebook"><img class="w-[35px]" src="./images/icon-facebook.svg" alt="Logo de facebook" ></a>
                     <a href="/" aria-label="Ir a la página de Twitter"><img class="w-[35px]" src="./images/icon-twitter.svg" alt="logo de twitter" ></a>
                 </div>
