@@ -1,6 +1,6 @@
 "use strict";
 
-/* Header */
+/* Navegador */
 
 const toggleBtn = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -42,8 +42,6 @@ const tabsData = [
     text: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."
   }
 ];
-
-
 
 const tabButtons = document.querySelectorAll(".tabs__btn");
 const bookmarkImg = document.querySelector(".bookmark__image img");
@@ -114,6 +112,5 @@ email.addEventListener('input', () => {
     errMsg.hidden = true;
     email.removeAttribute('aria-invalid');
     email.removeAttribute('aria-describedby');
-    
   }
 });
