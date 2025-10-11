@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -274,6 +274,10 @@ img {
 }
 
 /* Footer */
+.input-wrapper input::before {
+  background-color: rgb(250, 87, 87);
+}
+
 .footer__navbar {
   background-color: rgba(37, 43, 70, 0.95);
 }
@@ -492,10 +496,10 @@ img {
 }
 
 .hero__content h2 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .hero__content p {
@@ -518,7 +522,7 @@ img {
   position: relative;
   width: 100%;
   max-width: 100rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 .hero__image::before {
   content: "";
@@ -533,7 +537,7 @@ img {
 }
 .hero__image img {
   width: 100%;
-  max-width: 50rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 678px) {
@@ -550,23 +554,23 @@ img {
   .hero__content h2 {
     width: 100%;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     margin: 0 auto 2.5rem auto;
     text-align: left;
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: rgba(37, 43, 70, 0.95);
   }
   .hero__content p {
     width: 100%;
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     margin: 0 auto 2.5rem auto;
     text-align: left;
     line-height: 3rem;
     color: rgb(100, 100, 108);
   }
   .hero__content .hero__buttons-box {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -577,6 +581,7 @@ img {
   .hero__image {
     order: 1;
     width: 50%;
+    margin-bottom: 0;
   }
   .hero__image img {
     width: 100%;
@@ -590,7 +595,7 @@ img {
 }
 
 .features__info h2 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3rem;
@@ -639,12 +644,12 @@ img {
     margin: 0 auto;
     margin-bottom: 7.5rem;
   }
+  .features__info {
+    border-bottom: none;
+  }
   .features__info p {
     width: 60%;
     margin: 0 auto 7.5rem auto;
-  }
-  .features__info {
-    border-bottom: none;
   }
   .features__tabs {
     display: flex;
@@ -697,7 +702,7 @@ img {
 }
 
 .bookmark__content h2 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3rem;
@@ -732,7 +737,7 @@ img {
     width: 50%;
   }
   .bookmark__content h2 {
-    width: 85%;
+    width: 90%;
     margin: 0 auto 2.5rem 0;
     text-align: left;
     font-size: 3rem;
@@ -756,8 +761,11 @@ img {
   margin-bottom: 15rem;
 }
 
+.download__info {
+  margin-bottom: 5rem;
+}
 .download__info h2 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3rem;
@@ -769,6 +777,7 @@ img {
   text-align: center;
   line-height: 3rem;
   color: rgb(100, 100, 108);
+  margin-bottom: 0;
 }
 
 .download__cards {
@@ -818,8 +827,11 @@ img {
   margin-bottom: 15rem;
 }
 
+.faqs__info {
+  margin-bottom: 7.5rem;
+}
 .faqs__info h2 {
-  width: 85%;
+  width: 90%;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 3rem;
@@ -860,6 +872,9 @@ img {
   object-fit: contain;
   flex-shrink: 0;
 }
+.faqs__toggle summary:hover {
+  color: rgb(250, 87, 87);
+}
 .faqs__toggle p {
   color: rgb(100, 100, 108);
   line-height: 3.5rem;
@@ -868,7 +883,7 @@ img {
 
 @media (min-width: 678px) {
   .faqs {
-    width: 40%;
+    width: 50%;
     margin: 0 auto 15rem auto;
   }
   details:first-of-type {

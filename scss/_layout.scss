@@ -210,7 +210,11 @@
 }
 
 /* Footer */
-
+.input-wrapper {
+    input::before {
+        background-color: $color-red-light;
+    }
+}
 .footer__navbar {
     background-color: $color-blue-dark;
 }
@@ -265,6 +269,7 @@
         align-items: start;
         width: 40%;
     }
+    
     .footer__navbar-box {
         @include flex-space($justify-content: space-between);
         width: 80%;

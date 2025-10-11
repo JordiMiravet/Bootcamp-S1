@@ -13,8 +13,9 @@
     margin-bottom: 15rem;
 }
 .hero__content {
+    
     h2 {
-        @include tittle-section($font-size: 3.5rem);
+        @include tittle-section($font-size: 4rem);
     }
     p{
         @include text-section()
@@ -28,7 +29,7 @@
     position: relative;
     width: 100%;
     max-width: 100rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
     &::before {
         content: "";
         position: absolute;
@@ -42,7 +43,7 @@
     }
     img {
         width: 100%;
-        max-width: 50rem;
+        margin: 0 auto; 
     }
 }
 
@@ -50,30 +51,30 @@
 
 @media (min-width: 678px) {
     .hero {
-        @include flex-space($flex-direction: row); 
+        @include flex-space($flex-direction: row);  
     }
     .hero__content {
         width: 50%;
         h2 {
             @include center-item($width: 100%);
-            @include tittle-section($width: 60%, $text-align: left, $font-size: 3.5rem, $color: $color-blue-dark);
+            @include tittle-section($width: 80%, $text-align: left, $font-size: 4rem, $color: $color-blue-dark);
         }
         p {
             @include center-item($width: 100%);
-            @include text-section($width: 60%, $text-align: left, $color: $color-blue-dark);
-            
+            @include text-section($width: 80%, $text-align: left, $color: $color-blue-dark);
         }
         .hero__buttons-box {
-            @include center-item($width: 60%);
+            @include center-item($width: 80%);
             @include flex-space($justify-content: flex-start, $gap: 1.5rem);
         }
     }
     .hero__image {
         order: 1;
         width: 50%;
+        margin-bottom: 0; 
         img {
             width: 100%;
-            min-width: 90%;  
+            min-width: 90%; 
         }  
     }
 }
@@ -126,10 +127,11 @@
         margin-bottom: 7.5rem;
     }
     .features__info {
+        border-bottom: none;
         p {
             @include center-item($width: 60%, $margin: 0 auto 7.5rem auto);
         }
-        border-bottom: none;
+        
     }
     .features__tabs {
         @include flex-space($gap: 0);
@@ -155,7 +157,6 @@
 /* Bookmark section */
 
 .bookmark {
-    
     margin: 0 auto 17.5rem auto;
 }
 .bookmark__image {
@@ -220,11 +221,13 @@
     margin-bottom: 15rem;
 }
 .download__info {
+    margin-bottom: 5rem;
     h2 {
         @include tittle-section();
     }
     p{
         @include text-section();
+        margin-bottom: 0;
     }
 }
 .download__cards {
@@ -263,6 +266,7 @@
     margin-bottom: 15rem;
 }
 .faqs__info {
+    margin-bottom: 7.5rem;
     h2 {
         @include tittle-section();
     }
@@ -294,6 +298,9 @@
             object-fit: contain;
             flex-shrink: 0;
         }
+        &:hover {
+            color: $color-red-light;
+        }
     }
     p {
         color: $color-grey-dark;
@@ -303,7 +310,7 @@
 }
 @media (min-width: 678px) {
     .faqs {
-        @include center-item($width: 40%, $margin: 0 auto 15rem auto);
+        @include center-item($width: 50%, $margin: 0 auto 15rem auto);
     }
     details {
         &:first-of-type {
