@@ -239,7 +239,7 @@ img {
   padding: 1rem 4rem 1rem 1.25rem;
   border: 1px solid transparent;
   border-radius: none;
-  font-size: 1rem;
+  font-size: 1.25rem;
   outline: none;
 }
 .footer__form .input-wrapper.invalid input {
@@ -250,7 +250,7 @@ img {
   display: none;
   position: absolute;
   right: 1rem;
-  top: 25%;
+  top: 20%;
   transform: translateY(-50%);
   width: 1.75rem;
   height: 1.75rem;
@@ -262,7 +262,7 @@ img {
 .footer__form .error-msg {
   margin-top: 0;
   padding: 0.75rem;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   border-radius: 0 0 0.5rem 0.5rem;
   color: #fff;
   display: none;
