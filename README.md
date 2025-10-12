@@ -7,8 +7,8 @@ Aquest projecte és una pàgina web de presentació per a una extensió de gesto
 
 ## Tecnologies Utilitzades
 
-- Frontend: HTML5, CSS3 (amb variables i media queries), SCSS (compilat a CSS)
-- Libreries/UI: Cap (estil propi des de zero)
+- Frontend: HTML5, CSS3 (amb variables i media queries), SCSS (compilat a CSS) & tailwind (per a la tercera branca)
+- Llibreries/UI: Cap (estil propi des de zero)
 - Accessibilitat:  
   - Estructura semàntica amb etiquetes role i aria-*  
   - Navegació accessible i adaptable a dispositius mòbils
@@ -17,12 +17,28 @@ Aquest projecte és una pàgina web de presentació per a una extensió de gesto
 
 ## Instal·lació del Projecte
 
-1. Clonar el repositori  
+1. Busca una carpeta on vulguis clonar el repositori.
+
+2. Obre Git Bash per clonar el repositori i escriu:
    ```bash
    git clone https://github.com/JordiMiravet/bookmark-landing-page.git
    ```
+3. Entra al projecte escrivint:
+  ```bash
+  cd bookmark-landing-page
+  ```
+4. Afegeix les branques al projecte local que s'acaba de crear escrivint:
+```bash
+git fetch --all
+```
 
-2. Obrir el fitxer index.html amb el navegador.
+5. Canvia a la branca desitjada escrivint:
+
+```bash
+git checkout feature/sass-implementation
+```
+
+6. Obre el fitxer index.html amb el navegador.
 
 ## Demo  
 
