@@ -36,14 +36,6 @@ git fetch --all
 ```bash
 git checkout feature/vanilla-implementation
 ```
-o 
-```bash
-git checkout feature/sass-implementation
-```
-o
-```bash
-git checkout feature/tailwind-implementation
-```
 
 6. Obre el fitxer index.html amb el navegador.
 
