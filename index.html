@@ -6,156 +6,285 @@
     <meta name="author" content="Jordi Miravet">
     <meta name="keywords" content="HTML, CSS, SCSS, SASS, Bootstrap">
     <title>Bookmark-landing-page</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="output.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
-<body>
-    <header role="banner">
-        <nav class="navbar" role="navigation" aria-label="Menú principal">
-            <h1 class="logo">
-                <a href="#">
-                    <img src="images/logo-bookmark.svg" alt="Logotipo de Bookmark">
-                </a>
+<body class="m-0 p-0 font-family">
+    <header class="mb-20" role="banner"> 
+        <nav role="navigation" aria-label="Menú principal"
+        class="navbar flex justify-between items-center 
+        z-1  p-3.5 w-[90%] mx-auto"> 
+            <h1 class="m-0">
+                <a href="#"><img class="w-50 m-0" src="images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a>
             </h1>
-            <button class="menu-toggle" aria-label="Abrir menú de navegación">
-                <img src="./images/icon-hamburger.svg" alt="imagen de menú de navegación">
-            </button>
-            <ul class="nav-links" role="menubar">
-                <li><a role="menuitem" href="#features">Feature</a></li>
-                <li><a role="menuitem" href="#">Pricing</a></li>
-                <li><a role="menuitem" href="#contact">Contact</a></li>
-                <li><a role="menuitem" class="btn-loggin" href="#">Login</a></li>
+            <button aria-label="Abrir menú de navegación"
+            class="menu-toggle md:hidden 
+            bg-none border-0 cursor-pointer 
+            flex items-center justify-center 
+            w-10 h-10 z-10 transition duration-150"> 
+                <img class="z-2 w-8 mx-auto my-auto md:mb-0" src="./images/icon-hamburger.svg" alt="imagen de menú de navegación"> 
+            </button> 
+            <ul role="menubar" class="nav-links
+            z-1 fixed top-0 left-0 right-0 bottom-0 h-screen w-full bg-blue-dark
+            flex flex-col justify-center items-center text-center text-white
+            transform -translate-y-full transition-transform duration-300
+            md:static md:h-auto md:w-auto md:flex-row md:justify-end md:bg-transparent 
+            md:translate-y-0 md:transform-none md:gap-6 md:items-center md:text-black"> 
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Feature</a>
+                </li>
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Pricing</a>
+                </li>
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <a class="text-white md:text-black md:hover:text-red-light text-4xl md:text-base uppercase tracking-widest cursor-pointer m-0" role="menuitem" href="#features">Contact</a>
+                </li> 
+                <li class="w-[80%] md:w-auto border-t-1 md:border-none border-white py-6 md:py-0 m-0">
+                    <button 
+                    class="text-5xl md:text-sm px-10 m-auto md:m-0 md:px-4 py-2 w-full md:w-auto
+                    text-white md:bg-red-light md:text-white uppercase tracking-widest cursor-pointer  
+                    border-2  border-white md:rounded-md md:border-2 md:border-red-light
+                    md:hover:bg-white md:hover:text-red-light" 
+                    role="menuitem">Login</button>
+                </li>
             </ul>
-        </nav>
+        </nav> 
     </header> <!-- header -->
 
-    <main role="main">
-        <section class="hero">
-            <div class="hero__image">
-                <img src="./images/illustration-hero.svg" alt="imagen de muestra">
+    <main role="main" class="m-0 p-0">
+
+        <section class="mb-40 block md:flex justify-center align-middle flex-row mx-auto md:gap-5">
+            <div class="relative w-full mx-auto md:order-2 mb-10 md:mb-0 md:flex md:items-center md:justify-center">
+                <img class="w-full mx-auto " src="./images/illustration-hero.svg" alt="imagen de muestra">
+                <span class="absolute bg-blue-light w-[75%] h-[75%] 
+                bottom-0 right-0 -z-1 rounded-bl-[50%]"></span>
             </div>
-            <div class="hero__content">
-                <h2>A simple bookmark manager</h2>
-                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-                <div class="hero__buttons-box">
-                    <button type="button" class="btn-primary btn-download-chrome" aria-label="Descargar extensión para Chrome">Get it on Chrome</button>
-                    <button type="button" class="btn-primary btn-download-firefox" aria-label="Descargar extensión para Firefox">Get it on Firefox</button>
+            <div class="w-[80%] mx-auto md:flex md:justify-center md:items-center flex-col">
+                <h2 
+                class="text-grey-darkest text-[30px] md:text-[35px] text-center md:text-start md:leading-12 
+                font-u font-bold capitalize 
+                mb-5 md:w-[75%] md:mx-auto">A simple bookmark manager</h2>
+                <p class="md:w-[75%] md:mx-auto mb-10 md:mb-5 text-gray-700 text-center md:text-start text-[17.5px] ">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                <div class=" mx-auto md:w-[75%] flex items-center justify-center text-start md:justify-start gap-4">
+                    <button type="button" 
+                    class="bg-blue-light text-white text-[15px] font-bold 
+                    px-2 py-3 rounded-md cursor-pointer
+                    border-2 border-blue-light shadow-md shadow-grey-light
+                    hover:border-blue-light hover:border-2 hover:bg-white hover:text-blue-light" 
+                    aria-label="Descargar extensión para Chrome">Get it on Chrome</button>
+                    <button type="button" 
+                    class="bg-white text-grey-dark shadow-md shadow-grey-light
+                    px-2 py-3 rounded-md 
+                    font-bold cursor-pointer
+                    border-2 border-white hover:border-grey-dark" 
+                    aria-label="Descargar extensión para Firefox">Get it on Firefox</button>
                 </div>
             </div>
         </section> <!-- hero -->
 
-        <section class="features" id="features" role="region" aria-label="Sección de características" aria-labelledby="features-title">
-            <div class="features__info">
-                <h2>Features</h2>
-                <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        <section class="block mb-20" id="features" role="region" aria-label="Sección de características" aria-labelledby="features-title">
+            <div class="w-[80%] my-0 mx-auto mb-12 md:w-[45%] md:mx-auto">
+                <h2 class="mb-5 text-grey-darkest text-[25px] md:text-[35px] text-center font-bold">Features</h2>
+                <p class="mb-10 text-center text-[17.5px] text-gray-700">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
             </div>
-            <div class="features__tabs" role="tablist" aria-label="Características del producto">
-                <div class="tabs__box">
-                    <button class="tabs__btn" role="tab">Simple Bookmarking</button>
+            <div class="w-[90%] md:w-[75%] grid grid-cols-3 my-0 mx-auto " role="tablist" aria-label="Características del producto">
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light border-t-1 border-t-grey-light md:border-t-0 text-center">
+                    <button 
+                    class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
+                    hover:border-b-4 hover:md:text-red-light 
+                    text-[20px] font-semibold text-grey-dark cursor-pointer" 
+                    role="tab">Simple Bookmarking</button>
                 </div>
-                <div class="tabs__box">
-                    <button class="tabs__btn" role="tab">Speedy Searching</button>
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
+                    <button 
+                    class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
+                    hover:border-b-4 hover:md:text-red-light 
+                    text-[20px] font-semibold text-grey-dark cursor-pointer" 
+                    role="tab">Speedy Searching</button>
                 </div>
-                <div class="tabs__box">
-                    <button class="tabs__btn" role="tab">Easy Sharing</button>
+                <div class="col-span-3 md:col-span-1 border-b-1 border-b-grey-light text-center">
+                    <button 
+                    class="tabs__btn px-0 py-5 border-b-4 border-b-transparent
+                    hover:border-b-4 hover:md:text-red-light 
+                    text-[20px] font-semibold text-grey-dark cursor-pointer" 
+                    role="tab">Easy Sharing</button>
                 </div>
             </div>
         </section> <!-- features -->
 
-        <section class="bookmark" role="tabpanel">
-            <div class="bookmark__image">
-                <img src="./images/illustration-features-tab-1.svg" alt="bookmark in one click illustrator">
+        <section class="mx-auto mb-20 md:mb-50 md:grid md:grid-cols-2 md:justify-center items-center" role="tabpanel">
+            <div class="bookmark__image relative mb-20 md:mb-0">
+                <img class="mx-auto w-[80%]" src="./images/illustration-features-tab-1.svg" alt="bookmark in one click illustrator">
+                <span class="absolute bg-blue-light w-[75%] h-[75%] left-0 bottom-[-20%] -z-2 rounded-br-[50%]"></span>
             </div>
-            <div class="bookmark__content">
-                <h2>Bookmark in one click</h2>
-                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                <button class="btn-primary btn-bookmark" aria-label="Más información sobre la función de la aplicación">More Info</button>
+            <div class="bookmark__content w-[90%]  my-0 mx-auto text-center md:w-[70%] md:text-start">
+                <h2 class="mb-5 text-grey-darkest text-[25px] text-center font-bold md:text-start">Bookmark in one click</h2>
+                <p class="text-[17.5px] text-center md:text-start text-gray-700 mb-10 md:mb-5">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <button 
+                class="invisible md:visible
+                bg-blue-light border-2 border-blue-light 
+                text-white  font-semibold
+                hover:bg-white hover:text-grey-dark 
+                mx-auto px-5 py-4 rounded-md mb-4 md:mb-0" 
+                aria-label="Más información sobre la función de la aplicación">More Info</button>
             </div>
         </section> <!-- bookmark -->
 
-        <section class="download" id="download" role="region" aria-label="Sección de descarga" >
-            <div class="download__info">
-                <h2>Download the extension</h2>
-                <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to priorize</p>
+        <section class="m-0 mb-50 block" id="download" role="region" aria-label="Sección de descarga" >
+            <div class="mx-auto w-auto md:mb-20">
+                <h2 class="text-grey-darkest text-[25px] text-center mb-10 md:mb-5 font-bold">Download the extension</h2>
+                <p class="text-[17.5px] text-center text-gray-700 mb-10 w-[80%] mx-auto md:w-[45%]">We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to priorize</p>
             </div>
-            <div class="download__cards">
-                <div class="card" aria-label="Tarjeta de descarga para Chrome">
-                    <img class="card__logo" src="./images/logo-chrome.svg" alt="logotipo de chrome">
-                    <h2>Add to Chrome</h2>
-                    <p>Minimum version 62</p>
-                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
-                    <button class="btn-primary btn-card-install" aria-label="Añadir e instalar extensión para Chrome">Add & Install Extension</button>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-7 mx-auto w-full max-w-[1200px]">
+                <div class="min-w-65 w-65 h-auto text-center rounded-2xl shadow-2xl shadow-blue-light md:mt-0 md:mb-30" aria-label="Tarjeta de descarga para Chrome">
+                    <img class="mx-auto my-4 pt-10 pb-5" src="./images/logo-chrome.svg" alt="logotipo de chrome">
+                    <h2 class="mx-auto pb-4 font-bold text-[20px] text-grey-darkest">Add to Chrome</h2>
+                    <p class="mx-auto pb-4 text-[15px] text-grey-dark">Minimum version 62</p>
+                    <img class="mx-auto my-5" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="
+                    bg-blue-light border-2 border-blue-light 
+                    text-white text font-semibold
+                    hover:bg-white hover:text-blue-light
+                    mx-auto px-5 py-4 rounded-2xl mb-4" aria-label="Añadir e instalar extensión para Chrome">Add & Install Extension</button>
                 </div>
-                <div class="card" aria-label="Tarjeta de descarga para Firefox">
-                    <img class="card__logo" src="./images/logo-firefox.svg" alt="logotipo de firefox">
-                    <h2>Add to Firefox</h2>
-                    <p>Minimum version 55</p>
-                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
-                    <button class="btn-primary btn-card-install" aria-label="Añadir e instalar extensión para Firefox">Add & Install Extension</button>
+                <div class="min-w-65 w-65 h-auto text-center rounded-2xl shadow-2xl shadow-blue-light md:mt-15 md:mb-15" aria-label="Tarjeta de descarga para Chrome">
+                    <img class="mx-auto my-4 pt-10 pb-5" src="./images/logo-firefox.svg" alt="logotipo de Firefox">
+                    <h2 class="mx-auto pb-4 font-bold text-[20px] text-grey-darkest">Add to Firefox</h2>
+                    <p class="mx-auto pb-4 text-[15px] text-grey-dark">Minimum version 55</p>
+                    <img class="card__dots mx-auto my-5" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="
+                    bg-blue-light border-2 border-blue-light 
+                    text-white text font-semibold
+                    hover:bg-white hover:text-blue-light
+                    mx-auto px-5 py-4 rounded-2xl mb-4" aria-label="Añadir e instalar extensión para Firefox">Add & Install Extension</button>
                 </div>
-                <div class="card" aria-label="Tarjeta de descarga para Opera">
-                    <img class="card__logo" src="./images/logo-opera.svg" alt="logotipo de opera">
-                    <h2>Add to Opera</h2>
-                    <p>Minimum version 46</p>
-                    <img class="card__dots" src="./images/bg-dots.svg" alt="separador de funciones">
-                    <button class="btn-primary btn-card-install" aria-label="Añadir e instalar extensión para Opera">Add & Install Extension</button>
+                <div class="min-w-65 w-65 h-auto text-center rounded-2xl shadow-2xl shadow-blue-light md:mt-30 md:mb-0" aria-label="Tarjeta de descarga para Chrome">
+                    <img class="mx-auto my-4 pt-10 pb-5" src="./images/logo-opera.svg" alt="logotipo de Opera">
+                    <h2 class="mx-auto pb-4 font-bold text-[20px] text-grey-darkest">Add to Opera</h2>
+                    <p class="mx-auto pb-4 text-[15px] text-grey-dark">Minimum version 46</p>
+                    <img class="card__dots mx-auto my-5" src="./images/bg-dots.svg" alt="separador de funciones">
+                    <button class="
+                    bg-blue-light border-2 border-blue-light 
+                    text-white text font-semibold
+                    hover:bg-white hover:text-blue-light 
+                    mx-auto px-5 py-4 rounded-2xl mb-4" aria-label="Añadir e instalar extensión para Opera">Add & Install Extension</button>
                 </div>
             </div>
         </section> <!-- download -->
 
-        <section class="faqs" role="region" aria-label="Sección de preguntas frecuentes">
-            <div class="faqs__info">
-                <h2>Frequently Asked Questions</h2>
-                <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+        <section class="w-[80%] md:w-[40%] mx-auto mb-25" role="region" aria-label="Sección de preguntas frecuentes">
+            <div class="mb-20 md:mb-10">
+                <h2 class="mb-10 md:mb-5 text-center text-grey-darkest text-3xl font-bold">Frequently Asked Questions</h2>
+                <p class="mx-auto text-center text-[17.5px] text-gray-700 mb-10">Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
             </div>
-            <div class="faqs__toggle">
-                <details>
-                    <summary><span>What is Bookmark?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos maiores nesciunt quidem rerum repudiandae excepturi minus ad commodi porro nemo.
+            <div class="flex item-center justify-center flex-col">
+                <details class="group border-b border-gray-200 md:border-t">
+                    <summary class="flex justify-between items-center py-5 cursor-pointer">
+                        <span class="font-semibold text-[17.5px] md:hover:text-red-light">What is Bookmark?</span>
+                        <img
+                        src="./images/icon-arrow.svg"
+                        alt="icono de despliegue"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
+                        />
+                    </summary>
+                    <p class="mb-5 text-gray-700 text-[15px] leading-7">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos maiores nesciunt quidem rerum repudiandae excepturi minus ad commodi porro nemo.
                     </p>
                 </details>
-                <details>
-                    <summary><span>How can I request a new browser?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat inventore nihil dolorum natus ex doloremque ducimus ipsam hic aut. Porro!</p>
+                <details class="group border-b border-gray-200">
+                    <summary class="flex justify-between items-center py-5 cursor-pointer">
+                        <span class="font-semibold text-[17.5px] md:hover:text-red-light">How can I request a new browser?</span>
+                        <img
+                        src="./images/icon-arrow.svg"
+                        alt="icono de despliegue"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
+                        />
+                    </summary>
+                    <p class="mb-5 text-gray-700 text-[15px] leading-7">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorum fuga provident sint perferendis officia natus magni culpa officiis iusto animi inventore, nesciunt rerum quae aut tempore deserunt rem recusandae dolore repellendus, distinctio, et assumenda eveniet voluptatibus? Animi, maxime delectus?
+                    </p>
                 </details>
-                <details>
-                    <summary><span>Is there a mobile app?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni velit omnis nisi perspiciatis laboriosam consequuntur vero numquam facere, molestias dolor.</p>
+                <details class="group border-b border-gray-200">
+                    <summary class="flex justify-between items-center py-5 cursor-pointer">
+                        <span class="font-semibold text-[17.5px] md:hover:text-red-light">Is there a mobile app?</span>
+                        <img
+                        src="./images/icon-arrow.svg"
+                        alt="icono de despliegue"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180 "
+                        />
+                    </summary>
+                    <p class="mb-5 text-gray-700 text-[15px] leading-7">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sint nobis molestias illum nulla repellat ipsa cumque? Harum eaque officia distinctio earum ipsum odit, placeat sint minima laborum quis? Sit.
+                    </p>
                 </details>
-                <details>
-                    <summary><span>What about other Chromium browsers?</span><img src="./images/icon-arrow.svg" alt="icono de despliegue"></summary>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis sequi neque laudantium maiores quo. Excepturi porro aliquam est pariatur ut!</p>
+                <details class="group border-b border-gray-200 mb-10">
+                    <summary class="flex justify-between items-center py-5 cursor-pointer">
+                        <span class="font-semibold text-[17.5px] md:hover:text-red-light">What about other Chromium browsers?</span>
+                        <img
+                        src="./images/icon-arrow.svg"
+                        alt="icono de despliegue"
+                        class="w-5 h-4 transition-transform duration-300 group-open:rotate-180"
+                        />
+                    </summary>
+                    <p class="mb-5 text-gray-700 text-[15px] leading-7">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti veniam esse hic voluptatibus delectus itaque placeat nemo dolorem harum omnis!
+                    </p>
                 </details>
-                <button type="button" class="btn-primary btn-info" aria-label="Ver más preguntas frecuentes">More Info</button>
+                <button type="button" 
+                class="
+                text-white hover:text-blue-light font-semibold 
+                bg-blue-light hover:bg-white 
+                border-2 border-blue-light  
+                px-5 py-3 rounded m-auto" 
+                aria-label="Ver más preguntas frecuentes">More Info</button>
             </div>
         </section> <!-- faqs -->
     </main> <!-- main -->
 
     <footer class="footer" role="contentinfo">
-        <div class="footer__contact" role="region" aria-label="Sección de contacto">
-            <h3>35,000+ Already Joined</h3>
-            <h2>Stay up-to-date with what we're doing</h2>
-            <form class="footer__form" id="contact" role="form" aria-label="Formulario de contacto" novalidate>
-                <div class="input-wrapper">
-                    <input id="email" type="email" placeholder="Enter your email address" required>
-                    <span class="error-icon" aria-hidden="true"><img src="./images/icon-error.svg" alt="Icono de error"></span>
-                    <p id="email-error" class="error-msg" aria-live="polite" hidden></p>
+        <div class="bg-blue-light pt-15 pb-10 text-center" role="region" aria-label="Sección de contacto">
+            <h3 class="text-white text-[15px] md:text-[10px] font-semibold uppercase tracking-[5px] mb-4">35,000+ Already Joined</h3>
+            <h2 class="text-white text-2xl font-semibold w-80 mx-auto mb-5 md:mb-10">Stay up-to-date with wshat we're doing</h2>
+            <form id="contact" role="form"
+            class="footer__form mx-auto md:w-[50%] gap-0 md:gap-2 
+            md:flex md:justify-between md:items-center"
+            aria-label="Formulario de contacto" novalidate>
+                <div class="input-wrapper relative md:w-[70%]">
+                    <input id="email" type="email" placeholder="Enter your email address"
+                    class="w-[85%] md:w-full p-3 mb-0 md:mx-auto rounded-md border-2 
+                    bg-white border-white" 
+                    required>
+                    <span id="errorIcon" class="error-icon absolute right-20 md:right-5 top-4 hidden" aria-hidden="true">
+                        <img src="./images/icon-error.svg" alt="Icono de error">
+                    </span>
+                    <p id="email-error" 
+                    class="error-msg w-[85%] md:w-full md:w-70% mx-auto my-0 pl-2.5 py-1
+                    bg-red-light rounded-b-md
+                    text-left text-white" 
+                    aria-live="polite" hidden></p>
                 </div>
-                <button type="submit" class="btn-primary btn-contact" aria-label="Enviar correo electrónico">Contact Us</button>
+                <button type="submit" 
+                class="w-[85%] md:w-[30%] py-3 rounded-md 
+                mt-5 md:mt-0 md:mb-auto md:mx-auto
+                bg-red-light border-red-light border-2 hover:bg-white
+                font-semibold text-white hover:text-red-light" 
+                aria-label="Enviar correo electrónico">Contact Us</button>
             </form>
         </div>
-        <div class="footer__navbar">
-            <div class="footer__navbar-box">
-                <nav role="navigation" role="navigation" aria-label="Enlaces de navegación del footer">
-                    <ul>
-                        <li><a href="#"><img src="./images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+        <div class="bg-blue-dark py-10 md:py-0">
+            <div class="py-[20px] md:flex justify-between md:w-[80%] md: mx-auto">
+                <nav class="mb-7 md:mb-0"
+                role="navigation" aria-label="Enlaces de navegación del footer">
+                    <ul class="text-center md:flex md:justify-center md:items-center md:flex-row md:gap-10">
+                        <li class="mb-[25px] md:mb-0"><a href="#"><img class="mx-auto mb-5 md:mb-0 w-[175px]" src="./images/logo-bookmark.svg" alt="Logotipo de Bookmark"></a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="#features">Features</a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="">Pricing</a></li>
+                        <li class="my-[25px] md:my-0"><a class="text-[15px] text-white uppercase tracking-widest hover:text-red-light" href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="footer__social" role="region" aria-label="Redes sociales">
-                    <a href="/" aria-label="Ir a la página de Facebook"><img src="./images/icon-facebook.svg" alt="Logo de facebook" ></a>
-                    <a href="/" aria-label="Ir a la página de Twitter"><img src="./images/icon-twitter.svg" alt="logo de twitter" ></a>
+                <div class="flex justify-center align-middle gap-10 mt-[20px] md:mt-0" role="region" aria-label="Redes sociales">
+                    <a href="/" aria-label="Ir a la página de Facebook"><img class="w-[35px]" src="./images/icon-facebook.svg" alt="Logo de facebook" ></a>
+                    <a href="/" aria-label="Ir a la página de Twitter"><img class="w-[35px]" src="./images/icon-twitter.svg" alt="logo de twitter" ></a>
                 </div>
             </div>
         </div>
