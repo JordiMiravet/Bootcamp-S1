@@ -33,6 +33,15 @@ git fetch --all
 ```
 
 5. Canvia a la branca desitjada escrivint:
+- Per a la branca vanilla
+```bash
+git checkout feature/vanilla-implementation
+```
+- Per a la branca sass
+```bash
+git checkout feature/sass-implementation
+```
+- Per a la branca tailwind
 ```bash
 git checkout feature/tailwind-implementation
 ```
