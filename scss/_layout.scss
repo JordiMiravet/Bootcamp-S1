@@ -6,7 +6,8 @@
     z-index: 1001;
     margin: 0 auto 5rem auto;
     padding: 1.5rem;
-    width: 90%;
+    width: 80%;
+    max-width: $layout-max-width;
     .logo {
         position: relative;
         z-index: 1003;

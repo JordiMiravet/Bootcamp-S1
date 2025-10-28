@@ -45,6 +45,9 @@
         @include button($color-red-light, $color-white);
     }
 }
+.btn-card-install{
+    font-size: 1rem;
+}
 
 /* Card */
 
@@ -54,15 +57,16 @@
     border-radius: 1rem;
     box-shadow: 0rem 0rem 2.5rem 0rem $color-box-shadow-blue;
     margin: 0 auto;
-    min-width: 25rem;
+    min-width: 20rem;
+    min-height: 30rem;
     text-align: center;
     .card__logo {
-        @include center-item($width: 50%, $margin: 7.5rem auto 0 auto)
+        @include center-item($width: 50%, $margin: 2.5rem auto 2.5rem auto)
     }
     h2 {
         color: $color-blue-dark;
-        margin: 3rem 0 0.5rem 0;
-        font-size: 2.25rem;
+        margin: 0.5rem 0 0.5rem 0;
+        font-size: 1.75rem;
     }
     p {
         color: $color-grey-dark;

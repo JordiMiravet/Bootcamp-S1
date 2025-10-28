@@ -26,8 +26,11 @@
 
 /* Fuente */
 
-    $font-family: "Arial", Helvetica, sans-serif; 
+    $font-family: "Rubik", sans-serif; 
+    $font-weight-medium: 400;
+    $font-weight-regular: 500;
     
 /* Breakpoints */
 
     $breakpoint-tablet: 768px;
+    $layout-max-width: 1080px; 

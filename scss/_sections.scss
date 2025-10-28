@@ -2,7 +2,7 @@
 
 .hero {
     display: block;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
 }
 .hero__content {
     
@@ -49,14 +49,14 @@
         width: 50%;
         h2 {
             @include center-item($width: 100%);
-            @include tittle-section($width: 80%, $text-align: left, $font-size: 4rem, $color: $color-blue-dark);
+            @include tittle-section($width: 70%, $text-align: left, $font-size: 4rem, $color: $color-blue-dark);
         }
         p {
             @include center-item($width: 100%);
-            @include text-section($width: 80%, $text-align: left, $color: $color-blue-dark);
+            @include text-section($width: 70%, $text-align: left, $color: $color-blue-dark);
         }
         .hero__buttons-box {
-            @include center-item($width: 80%);
+            @include center-item($width: 70%);
             @include flex-space($justify-content: flex-start, $gap: 1.5rem);
         }
     }
@@ -65,7 +65,7 @@
         width: 50%;
         margin-bottom: 0; 
         img {
-            width: 100%;
+            width: 90%;
             min-width: 90%; 
         }  
     }
@@ -91,17 +91,16 @@
     .tabs__box {
         @include center-item($width: 80%);
         text-align: center;
-        border-bottom: 1px solid $color-grey-light;
+        border-bottom: 0.5px solid $color-grey-lightest;
         &:first-of-type {
-            border-top: 1px solid $color-grey-light;
+            border-top: 0.5px solid $color-grey-lightest;
         }
     }
     .tabs__btn {
         padding: 2.5rem;
         border: none;
-        border-bottom: 2px solid transparent;
-        font-size: 2.25rem;
-        font-weight: 700;
+        font-size: 1.75rem;
+        font-weight: $font-weight-regular;
         color: $color-grey-dark;
         border-bottom: .5rem solid transparent;
         background-color: transparent;
@@ -119,9 +118,9 @@
         margin-bottom: 7.5rem;
     }
     .features__info {
-        border-bottom: none;
+        border-bottom: 7.5rem;
         p {
-            @include center-item($width: 60%, $margin: 0 auto 7.5rem auto);
+            @include center-item($width: 60%);
         }
         
     }
@@ -132,8 +131,9 @@
         } 
     }    
     .tabs__btn {
-        padding: 2.5rem;
+        padding: 2rem;
         margin: 0;
+        font-size: 1.75rem;
         white-space: nowrap;
         &.active {
             color: $color-grey-dark;
@@ -181,8 +181,11 @@
 
 @media (min-width: $breakpoint-tablet) {
     .bookmark {
+        
         @include flex-space($gap: 10rem); 
-        @include center-item($width: 80%, $margin: 0 auto 15rem auto);
+        @include center-item($width: 80%);
+        margin-bottom: 10rem;
+        
     }
     .bookmark__image {
         width: 50%;
@@ -194,11 +197,11 @@
     .bookmark__content {
         width: 50%;
         h2 {
-            @include tittle-section($text-align: left, $margin: 0 auto 2.5rem 0);
+            @include tittle-section($width: 90%, $text-align: left, $margin: 0 auto 2.5rem 0);
             margin-left: 0;
         }
         p {
-            @include text-section($text-align: left, $margin: 0 auto 2.5rem 0);
+            @include text-section($width: 90%, $text-align: left, $margin: 0 auto 2.5rem 0);
             margin-left: 0;
         }
         .btn-bookmark {
@@ -232,6 +235,7 @@
         margin-bottom: 7.5rem;
         p {
             @include text-section($width: 35%);
+            font-size: 1.5rem;
         }
     }
     .download__cards {
@@ -281,7 +285,7 @@
         display: flex;
         justify-content: space-between;
         text-align: left; 
-        font-weight: 600;
+        font-weight: $font-weight-medium;
         color: $color-black;
         cursor: pointer;
         img {

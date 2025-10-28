@@ -34,8 +34,9 @@
 
 /* Text */
 
-@mixin tittle-section($width: 90%, $margin: 0 auto 2.5rem auto, $text-align: center, $font-size: 3rem, $color: $color-blue-dark ) {
+@mixin tittle-section($width: 90%, $margin: 0 auto 2.5rem auto, $text-align: center, $font-size: 2.5rem, $color: $color-blue-dark ) {
     width: $width;
+    font-weight: 500;
     margin: $margin;
     text-align: $text-align;
     font-size:  $font-size;
@@ -43,8 +44,10 @@
 }
 @mixin text-section($width: 85%, $margin: 0 auto 2.5rem auto, $text-align: center, $color: $color-grey-dark) {
     width: $width;
+    font-weight: 400;
+    font-size: 1.75rem;
     margin: $margin;
     text-align: $text-align;
-    line-height: 3rem;
-    color: $color-grey-dark;
+    line-height: 2.5rem;
+    color: $color-grey-light;
 }

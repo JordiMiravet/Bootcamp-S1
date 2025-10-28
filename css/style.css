@@ -22,7 +22,7 @@ body {
   font-size: 1.75rem;
   margin: 0;
   padding: 0;
-  font-family: "Arial", Helvetica, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 ul {
@@ -67,7 +67,8 @@ img {
   z-index: 1001;
   margin: 0 auto 5rem auto;
   padding: 1.5rem;
-  width: 90%;
+  width: 80%;
+  max-width: 1080px;
 }
 .navbar .logo {
   position: relative;
@@ -454,6 +455,10 @@ img {
     background-color: rgb(249.2630057803, 62.2369942197, 62.2369942197);
   }
 }
+.btn-card-install {
+  font-size: 1rem;
+}
+
 /* Card */
 .card {
   display: grid;
@@ -461,17 +466,18 @@ img {
   border-radius: 1rem;
   box-shadow: 0rem 0rem 2.5rem 0rem rgba(0, 124, 169, 0.35);
   margin: 0 auto;
-  min-width: 25rem;
+  min-width: 20rem;
+  min-height: 30rem;
   text-align: center;
 }
 .card .card__logo {
   width: 50%;
-  margin: 7.5rem auto 0 auto;
+  margin: 2.5rem auto 2.5rem auto;
 }
 .card h2 {
   color: rgba(37, 43, 70, 0.95);
-  margin: 3rem 0 0.5rem 0;
-  font-size: 2.25rem;
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 1.75rem;
 }
 .card p {
   color: rgb(100, 100, 108);
@@ -493,11 +499,12 @@ img {
 /* Hero section*/
 .hero {
   display: block;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
 }
 
 .hero__content h2 {
   width: 90%;
+  font-weight: 500;
   margin: 0 auto 2.5rem auto;
   text-align: center;
   font-size: 4rem;
@@ -505,10 +512,12 @@ img {
 }
 .hero__content p {
   width: 85%;
+  font-weight: 400;
+  font-size: 1.75rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  line-height: 3rem;
-  color: rgb(100, 100, 108);
+  line-height: 2.5rem;
+  color: rgb(150, 150, 150);
 }
 .hero__content .hero__buttons-box {
   display: flex;
@@ -555,7 +564,8 @@ img {
   .hero__content h2 {
     width: 100%;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
+    font-weight: 500;
     margin: 0 auto 2.5rem auto;
     text-align: left;
     font-size: 4rem;
@@ -564,14 +574,16 @@ img {
   .hero__content p {
     width: 100%;
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
+    font-weight: 400;
+    font-size: 1.75rem;
     margin: 0 auto 2.5rem auto;
     text-align: left;
-    line-height: 3rem;
-    color: rgb(100, 100, 108);
+    line-height: 2.5rem;
+    color: rgb(150, 150, 150);
   }
   .hero__content .hero__buttons-box {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -585,7 +597,7 @@ img {
     margin-bottom: 0;
   }
   .hero__image img {
-    width: 100%;
+    width: 90%;
     min-width: 90%;
   }
 }
@@ -597,17 +609,20 @@ img {
 
 .features__info h2 {
   width: 90%;
+  font-weight: 500;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .features__info p {
   width: 85%;
+  font-weight: 400;
+  font-size: 1.75rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  line-height: 3rem;
-  color: rgb(100, 100, 108);
+  line-height: 2.5rem;
+  color: rgb(150, 150, 150);
 }
 
 .features__tabs {
@@ -618,17 +633,16 @@ img {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  border-bottom: 1px solid rgb(150, 150, 150);
+  border-bottom: 0.5px solid rgb(225, 225, 225);
 }
 .features__tabs .tabs__box:first-of-type {
-  border-top: 1px solid rgb(150, 150, 150);
+  border-top: 0.5px solid rgb(225, 225, 225);
 }
 .features__tabs .tabs__btn {
   padding: 2.5rem;
   border: none;
-  border-bottom: 2px solid transparent;
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 500;
   color: rgb(100, 100, 108);
   border-bottom: 0.5rem solid transparent;
   background-color: transparent;
@@ -646,11 +660,11 @@ img {
     margin-bottom: 7.5rem;
   }
   .features__info {
-    border-bottom: none;
+    border-bottom: 7.5rem;
   }
   .features__info p {
     width: 60%;
-    margin: 0 auto 7.5rem auto;
+    margin: 0 auto;
   }
   .features__tabs {
     display: flex;
@@ -663,8 +677,9 @@ img {
     border-top: none;
   }
   .tabs__btn {
-    padding: 2.5rem;
+    padding: 2rem;
     margin: 0;
+    font-size: 1.75rem;
     white-space: nowrap;
   }
   .tabs__btn.active {
@@ -704,17 +719,20 @@ img {
 
 .bookmark__content h2 {
   width: 90%;
+  font-weight: 500;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .bookmark__content p {
   width: 85%;
+  font-weight: 400;
+  font-size: 1.75rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  line-height: 3rem;
-  color: rgb(100, 100, 108);
+  line-height: 2.5rem;
+  color: rgb(150, 150, 150);
 }
 
 @media (min-width: 768px) {
@@ -725,7 +743,8 @@ img {
     flex-direction: row;
     gap: 10rem;
     width: 80%;
-    margin: 0 auto 15rem auto;
+    margin: 0 auto;
+    margin-bottom: 10rem;
   }
   .bookmark__image {
     width: 50%;
@@ -739,18 +758,21 @@ img {
   }
   .bookmark__content h2 {
     width: 90%;
+    font-weight: 500;
     margin: 0 auto 2.5rem 0;
     text-align: left;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgba(37, 43, 70, 0.95);
     margin-left: 0;
   }
   .bookmark__content p {
-    width: 85%;
+    width: 90%;
+    font-weight: 400;
+    font-size: 1.75rem;
     margin: 0 auto 2.5rem 0;
     text-align: left;
-    line-height: 3rem;
-    color: rgb(100, 100, 108);
+    line-height: 2.5rem;
+    color: rgb(150, 150, 150);
     margin-left: 0;
   }
   .bookmark__content .btn-bookmark {
@@ -767,17 +789,20 @@ img {
 }
 .download__info h2 {
   width: 90%;
+  font-weight: 500;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .download__info p {
   width: 85%;
+  font-weight: 400;
+  font-size: 1.75rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  line-height: 3rem;
-  color: rgb(100, 100, 108);
+  line-height: 2.5rem;
+  color: rgb(150, 150, 150);
   margin-bottom: 0;
 }
 
@@ -797,10 +822,13 @@ img {
   }
   .download__info p {
     width: 35%;
+    font-weight: 400;
+    font-size: 1.75rem;
     margin: 0 auto 2.5rem auto;
     text-align: center;
-    line-height: 3rem;
-    color: rgb(100, 100, 108);
+    line-height: 2.5rem;
+    color: rgb(150, 150, 150);
+    font-size: 1.5rem;
   }
   .download__cards {
     display: flex;
@@ -833,17 +861,20 @@ img {
 }
 .faqs__info h2 {
   width: 90%;
+  font-weight: 500;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: rgba(37, 43, 70, 0.95);
 }
 .faqs__info p {
   width: 85%;
+  font-weight: 400;
+  font-size: 1.75rem;
   margin: 0 auto 2.5rem auto;
   text-align: center;
-  line-height: 3rem;
-  color: rgb(100, 100, 108);
+  line-height: 2.5rem;
+  color: rgb(150, 150, 150);
 }
 
 .faqs__toggle {
@@ -863,7 +894,7 @@ img {
   display: flex;
   justify-content: space-between;
   text-align: left;
-  font-weight: 600;
+  font-weight: 400;
   color: #000;
   cursor: pointer;
 }
