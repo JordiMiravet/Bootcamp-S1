@@ -40,7 +40,7 @@
     letter-spacing: 0.1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $breakpoint-tablet) {
     .btn-loggin {
         @include button($color-red-light, $color-white);
     }

@@ -249,7 +249,7 @@
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: $breakpoint-tablet) {
     .footer__navbar {
         padding: 0;
     }

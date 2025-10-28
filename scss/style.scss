@@ -49,7 +49,7 @@
 
 
 
-@media (min-width: 678px) {
+@media (min-width: $breakpoint-tablet) {
     .hero {
         @include flex-space($flex-direction: row);  
     }
@@ -121,7 +121,7 @@
     }
 }
 
-@media (min-width: 678px) {
+@media (min-width: $breakpoint-tablet) {
     .features {
         @include center-item($width: 60%);
         margin-bottom: 7.5rem;
@@ -187,7 +187,7 @@
     } 
 }
 
-@media (min-width: 678px) {
+@media (min-width: $breakpoint-tablet) {
     .bookmark {
         @include flex-space($gap: 10rem); 
         @include center-item($width: 80%, $margin: 0 auto 15rem auto);
@@ -308,7 +308,7 @@
         text-align: left;
     }
 }
-@media (min-width: 678px) {
+@media (min-width: $breakpoint-tablet) {
     .faqs {
         @include center-item($width: 50%, $margin: 0 auto 15rem auto);
     }

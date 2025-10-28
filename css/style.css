@@ -4,6 +4,7 @@
 /* Sombras */
 /* Tamaños de fuente */
 /* Fuente */
+/* Breakpoints */
 /* Buttons */
 /* Display */
 /* Center elements */
@@ -315,7 +316,7 @@ img {
   min-width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .footer__navbar {
     padding: 0;
   }
@@ -540,7 +541,7 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .hero {
     display: flex;
     justify-content: center;
@@ -638,7 +639,7 @@ img {
   border-bottom: 0.5rem solid rgb(250, 87, 87);
 }
 
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .features {
     width: 60%;
     margin: 0 auto;
@@ -716,7 +717,7 @@ img {
   color: rgb(100, 100, 108);
 }
 
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .bookmark {
     display: flex;
     justify-content: center;
@@ -881,7 +882,7 @@ img {
   text-align: left;
 }
 
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .faqs {
     width: 50%;
     margin: 0 auto 15rem auto;
